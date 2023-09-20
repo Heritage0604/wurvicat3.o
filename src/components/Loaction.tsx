@@ -23,7 +23,15 @@ const Loaction = () => {
           Contact Us
         </Text>
         <Text mb={"10vh"}  fontSize={"15px"} ml={"20%"} mt={"5vh"} mr={"20%"} color={"white"}>
-Connect with us for all your electrical equipment needs. Our dedicated team of electrical engineering experts is here to provide you with top-notch products and technical support. Whether you're looking for high-quality components, advanced systems, or specialized solutions, we have the expertise to guide you. Reach out to us through the contact form or directly by email, and let's collaborate to power your projects with reliable, innovative electrical equipment solutions.
+Connect with us for all your electrical equipment needs.
+ Our dedicated team of electrical engineering experts is
+  here to provide you with top-notch products and technical
+   support. Whether you&apos;re  looking for high-quality components,
+    advanced systems, or specialized solutions, we have the expertise
+     to guide you. Reach out to us through the contact form or
+      directly by email, and let&apos;s  collaborate to power
+       your projects with reliable, innovative electrical equipment
+        solutions.
         </Text>
       </Flex>
     
