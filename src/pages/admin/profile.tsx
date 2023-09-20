@@ -10,7 +10,7 @@ type profileProps = {
     
 };
 
-const profile:React.FC<profileProps> = () => {
+const Profile:React.FC<profileProps> = () => {
      const [user, loading, error] = useAuthState(auth);
     return <div className='bg-slate-100 w-screen h-screen overflow-x-hidden'>
            
@@ -26,4 +26,4 @@ const profile:React.FC<profileProps> = () => {
         )}
     </div>
 }
-export default profile;
+export default Profile;

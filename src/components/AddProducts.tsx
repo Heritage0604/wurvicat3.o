@@ -143,7 +143,7 @@ if(user){
  getUser(user.email)
 }
 
-},[user,loading,error])
+},[user])
 
 
 

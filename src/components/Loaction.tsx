@@ -12,7 +12,7 @@ const Loaction = () => {
    <Flex flexDirection={{base:"column",md:"row"}} >
  
       <Flex width={{base:"100%",md:"60vw"}} display={{base:"none",md:"flex"}}  mt={{base:"0vh",md:"1vh"}}>
-<Image objectFit={'cover'}  width={{base:"100%",md:"100%"}} src={'/laptop-map.png'}/>
+<Image objectFit={'cover'}  width={{base:"100%",md:"100%"}} alt='location' src={'/laptop-map.png'}/>
       </Flex>
 
      

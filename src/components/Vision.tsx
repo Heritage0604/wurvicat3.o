@@ -118,11 +118,11 @@ customer relationship.
 </Flex>
 
 <Flex width={{base:"80vw",md:"50vw"}}  height={"300px"} display={{base:"none",md:'flex'}}>
-    <Image objectFit={'contain'} height={"350px"} src={img[image]}/>
+    <Image objectFit={'contain'} height={"350px"} alt='' src={img[image]}/>
 </Flex>
 
 <Flex  width={{base:"80vw",md:"50vw"}}  display={{base:"flex",md:'none'}}>
-    <Image  src={img[image]}/>
+    <Image alt=''  src={img[image]}/>
 </Flex>
 
 </Flex>

@@ -1,13 +1,21 @@
 {
-    "sourceFile": "src/pages/admin/Dashboard.tsx",
+    "sourceFile": "src/pages/admin/dashboard.tsx",
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1694098965098,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695217960373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,34 @@\n+'use client'\r\n+\r\n+import AdminNavbar from '@/components/AdminNavbar'\r\n+import TableAdminComponent from '@/components/TableAdminComponent'\r\n+import TotalItems from '@/components/TotalItems'\r\n+import { auth } from '@/firebase/firebase'\r\n+import React,{useEffect} from 'react'\r\n+import { useAuthState } from 'react-firebase-hooks/auth'\r\n+import { Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/react'\r\n+import DashBoardLoader from '@/components/DashBoardLoader'\r\n+\r\n+const Index = () => {\r\n+   const [user, loading, error] = useAuthState(auth);\r\n+   \r\n+\r\n+  return (\r\n+    <div className='bg-slate-100 w-screen h-screen overflow-x-hidden'>\r\n+        {user ? (\r\n+          <>\r\n+          <AdminNavbar/>\r\n+        <TotalItems/>\r\n+        <TableAdminComponent/>\r\n+          </>\r\n+        ):(\r\n+          <div>\r\n+     <DashBoardLoader/>\r\n+          </div>\r\n+        )}\r\n+ \r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default index\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695217966835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,21 +30,5 @@\n     </div>\r\n   )\r\n }\r\n \r\n-export default index\n-import AdminNavbar from '@/components/AdminNavbar'\r\n-import TableAdminComponent from '@/components/TableAdminComponent'\r\n-import TotalItems from '@/components/TotalItems'\r\n-import React from 'react'\r\n-\r\n-const index = () => {\r\n-  return (\r\n-    <div className='bg-slate-100 w-screen h-screen overflow-x-hidden'>\r\n-        <AdminNavbar/>\r\n-        <TotalItems/>\r\n-        <TableAdminComponent/>\r\n-    </div>\r\n-  )\r\n-}\r\n-\r\n-export default index\n\\ No newline at end of file\n+export default Index\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1694098965098,

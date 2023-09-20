@@ -9,7 +9,7 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import { Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/react'
 import DashBoardLoader from '@/components/DashBoardLoader'
 
-const index = () => {
+const Index = () => {
    const [user, loading, error] = useAuthState(auth);
    
 
@@ -31,4 +31,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

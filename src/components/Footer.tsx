@@ -9,7 +9,7 @@ const Footer = () => {
 
 <Flex width={{base:"100%",md:"30%"}} ml={{base:"10%",md:"0%"}} flexDir={'column'}>
   <Text mt={"3vh"} fontSize={"3xl"} color='white'>ABOUT US</Text>
-  <Image boxSize='100px' src={"/wurvicat.png"}/>
+  <Image boxSize='100px' alt='wurvicat' src={"/wurvicat.png"}/>
   <Text  mr={"15%"} color={'white'} mt={"3vh"}> Wurvicat Intl. aims to
 do business in the area of Construction, procurement and supply of a wide
 range of electrical distribution materials, project management, consultancy

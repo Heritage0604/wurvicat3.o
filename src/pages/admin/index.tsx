@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import { auth, db } from '@/firebase/firebase';
 import { useRouter } from 'next/router';
 import { doc, getDoc } from 'firebase/firestore';
-const index = () => {
+const Index = () => {
  
 	const authModal = useRecoilValue(authModalState);
 const [pageLoading, setPageLoading] = useState(true);
@@ -33,4 +33,4 @@ const [pageLoading, setPageLoading] = useState(true);
   )
 }
 
-export default index
+export default Index
