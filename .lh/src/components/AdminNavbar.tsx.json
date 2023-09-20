@@ -1,0 +1,94 @@
+{
+    "sourceFile": "src/components/AdminNavbar.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1694074621036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694075024657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,11 @@\n-rafce\n\\ No newline at end of file\n+import React from 'react'\r\n+\r\n+const AdminNavbar = () => {\r\n+  return (\r\n+ <Flex>\r\n+    \r\n+ </Flex>\r\n+  )\r\n+}\r\n+\r\n+export default AdminNavbar\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694075036986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { Flex } from '@chakra-ui/react'\r\n import React from 'react'\r\n \r\n const AdminNavbar = () => {\r\n   return (\r\n"
+                },
+                {
+                    "date": 1694075044565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const AdminNavbar = () => {\r\n   return (\r\n  <Flex>\r\n-    \r\n+\r\n  </Flex>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1694075281500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const AdminNavbar = () => {\r\n   return (\r\n  <Flex>\r\n-\r\n+Hello world\r\n  </Flex>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1694075289703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\r\n \r\n const AdminNavbar = () => {\r\n   return (\r\n- <Flex>\r\n+ <Flex bg=>\r\n Hello world\r\n  </Flex>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1694075301205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import { Flex } from '@chakra-ui/react'\r\n+import React from 'react'\r\n+\r\n+const AdminNavbar = () => {\r\n+  return (\r\n+ <Flex >\r\n+    <Flex>\r\n+        Hello w\r\n+    </Flex>\r\n+Hello world\r\n+ </Flex>\r\n+  )\r\n+}\r\n+\r\n+export default AdminNavbar\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694075309853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,25 +3,13 @@\n \r\n const AdminNavbar = () => {\r\n   return (\r\n  <Flex >\r\n-    <Flex>\r\n-        Hello w\r\n+    <Flex bg={\"blue\"}>\r\n+        Hello world\r\n     </Flex>\r\n Hello world\r\n  </Flex>\r\n   )\r\n }\r\n \r\n-export default AdminNavbar\n-import { Flex } from '@chakra-ui/react'\r\n-import React from 'react'\r\n-\r\n-const AdminNavbar = () => {\r\n-  return (\r\n- <Flex bg=>\r\n-Hello world\r\n- </Flex>\r\n-  )\r\n-}\r\n-\r\n export default AdminNavbar\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694075315641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const AdminNavbar = () => {\r\n   return (\r\n  <Flex >\r\n-    <Flex bg={\"blue\"}>\r\n+    <Flex bg={\"blue.500\"}>\r\n         Hello world\r\n     </Flex>\r\n Hello world\r\n  </Flex>\r\n"
+                },
+                {
+                    "date": 1694075328438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import { Flex } from '@chakra-ui/react'\r\n+import React from 'react'\r\n+\r\n+const AdminNavbar = () => {\r\n+  return (\r\n+ <Flex >\r\n+    <Flex height={{base:\"10vh\"}} bg={\"blue.500\"}>\r\n+        Hello world\r\n+    </Flex>\r\n+Hello world\r\n+ </Flex>\r\n+  )\r\n+}\r\n+\r\n+export default AdminNavbar\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694075336027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,28 +3,13 @@\n \r\n const AdminNavbar = () => {\r\n   return (\r\n  <Flex >\r\n-    <Flex height={{base:\"10vh\"}} bg={\"blue.500\"}>\r\n+    <Flex height={{base:\"10vh\",md:\"13vh\"}} bg={\"blue.500\"}>\r\n         Hello world\r\n     </Flex>\r\n Hello world\r\n  </Flex>\r\n   )\r\n }\r\n \r\n-export default AdminNavbar\n-import { Flex } from '@chakra-ui/react'\r\n-import React from 'react'\r\n-\r\n-const AdminNavbar = () => {\r\n-  return (\r\n- <Flex >\r\n-    <Flex bg={\"blue.500\"}>\r\n-        Hello world\r\n-    </Flex>\r\n-Hello world\r\n- </Flex>\r\n-  )\r\n-}\r\n-\r\n export default AdminNavbar\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694075377941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const AdminNavbar = () => {\r\n   return (\r\n  <Flex >\r\n-    <Flex height={{base:\"10vh\",md:\"13vh\"}} bg={\"blue.500\"}>\r\n+    <Flex position='relative' height={{base:\"10vh\",md:\"13vh\"}} bg={\"blue.500\"}>\r\n         Hello world\r\n     </Flex>\r\n Hello world\r\n  </Flex>\r\n"
+                },
+                {
+                    "date": 1694075390923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,11 @@\n const AdminNavbar = () => {\r\n   return (\r\n  <Flex >\r\n     <Flex position='relative' height={{base:\"10vh\",md:\"13vh\"}} bg={\"blue.500\"}>\r\n-        Hello world\r\n+       <Flex>\r\n+        \r\n+       </Flex>\r\n     </Flex>\r\n Hello world\r\n  </Flex>\r\n   )\r\n"
+                },
+                {
+                    "date": 1694075397339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   return (\r\n  <Flex >\r\n     <Flex position='relative' height={{base:\"10vh\",md:\"13vh\"}} bg={\"blue.500\"}>\r\n        <Flex>\r\n-        \r\n+        <Flex></Flex>\r\n        </Flex>\r\n     </Flex>\r\n Hello world\r\n  </Flex>\r\n"
+                },
+                {
+                    "date": 1694075513762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+import { Flex } from '@chakra-ui/react'\r\n+import React from 'react'\r\n+import { IconName } from \"react-icons/rx\";\r\n+\r\n+const AdminNavbar = () => {\r\n+  return (\r\n+ <Flex >\r\n+    <Flex position='relative' height={{base:\"10vh\",md:\"13vh\"}} bg={\"blue.500\"}>\r\n+       <Flex>\r\n+        <Flex></Flex>\r\n+        <Flex></Flex>\r\n+       </Flex>\r\n+    </Flex>\r\n+Hello world\r\n+ </Flex>\r\n+  )\r\n+}\r\n+\r\n+export default AdminNavbar\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694075524466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n   return (\r\n  <Flex >\r\n     <Flex position='relative' height={{base:\"10vh\",md:\"13vh\"}} bg={\"blue.500\"}>\r\n        <Flex>\r\n+        <Flex>He</Flex>\r\n         <Flex></Flex>\r\n-        <Flex></Flex>\r\n        </Flex>\r\n     </Flex>\r\n Hello world\r\n  </Flex>\r\n"
+                },
+                {
+                    "date": 1694075532498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,35 +1,18 @@\n import { Flex } from '@chakra-ui/react'\r\n import React from 'react'\r\n-import { IconName } from \"react-icons/rx\";\r\n+import { RxHamburgerMenu } from \"react-icons/rx\";\r\n \r\n const AdminNavbar = () => {\r\n   return (\r\n  <Flex >\r\n     <Flex position='relative' height={{base:\"10vh\",md:\"13vh\"}} bg={\"blue.500\"}>\r\n        <Flex>\r\n-        <Flex>He</Flex>\r\n+        <Flex>Hello</Flex>\r\n         <Flex></Flex>\r\n        </Flex>\r\n     </Flex>\r\n-Hello world\r\n- </Flex>\r\n-  )\r\n-}\r\n \r\n-export default AdminNavbar\n-import { Flex } from '@chakra-ui/react'\r\n-import React from 'react'\r\n-\r\n-const AdminNavbar = () => {\r\n-  return (\r\n- <Flex >\r\n-    <Flex position='relative' height={{base:\"10vh\",md:\"13vh\"}} bg={\"blue.500\"}>\r\n-       <Flex>\r\n-        <Flex></Flex>\r\n-       </Flex>\r\n-    </Flex>\r\n-Hello world\r\n  </Flex>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1694075553594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Flex } from '@chakra-ui/react'\r\n+import { Flex,Icon,Text,Link,Image } from '@chakra-ui/react'\r\n import React from 'react'\r\n import { RxHamburgerMenu } from \"react-icons/rx\";\r\n \r\n const AdminNavbar = () => {\r\n"
+                },
+                {
+                    "date": 1694075562871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   return (\r\n  <Flex >\r\n     <Flex position='relative' height={{base:\"10vh\",md:\"13vh\"}} bg={\"blue.500\"}>\r\n        <Flex>\r\n-        <Flex><Icon as={}/</Flex>\r\n+        <Flex><Icon as={}/></Flex>\r\n         <Flex></Flex>\r\n        </Flex>\r\n     </Flex>\r\n \r\n"
+                },
+                {
+                    "date": 1694075585900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   return (\r\n  <Flex >\r\n     <Flex position='relative' height={{base:\"10vh\",md:\"13vh\"}} bg={\"blue.500\"}>\r\n        <Flex>\r\n-        <Flex><Icon as={RxHamburgerMenu}/></Flex>\r\n+        <Flex><Icon color={\"wh\"} as={RxHamburgerMenu}/></Flex>\r\n         <Flex></Flex>\r\n        </Flex>\r\n     </Flex>\r\n \r\n"
+                }
+            ],
+            "date": 1694074621036,
+            "name": "Commit-0",
+            "content": "rafce"
+        }
+    ]
+}

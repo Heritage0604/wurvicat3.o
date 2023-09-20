@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/pages/admin/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1694074413666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694075200823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const index = () => {\r\n   return (\r\n     <div>\r\n-        <\r\n+        <A\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1694082041698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import AdminNavbar from '@/components/AdminNavbar'\r\n+import TotalItems from '@/components/TotalItems'\r\n+import React from 'react'\r\n+\r\n+const index = () => {\r\n+  return (\r\n+    <div className='bg-slate-50'>\r\n+        <AdminNavbar/>\r\n+        <TotalItems/>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default index\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1694074413666,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst index = () => {\r\n  return (\r\n    <div>index</div>\r\n  )\r\n}\r\n\r\nexport default index"
+        }
+    ]
+}

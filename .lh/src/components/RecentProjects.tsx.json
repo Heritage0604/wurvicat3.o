@@ -1,0 +1,78 @@
+{
+    "sourceFile": "src/components/RecentProjects.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1693924449650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1693924483557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,11 @@\n };\r\n \r\n const RecentProjects:React.FC<RecentProjectsProps> = () => {\r\n     \r\n-    return <div>Have a good coding</div>\r\n+    return(\r\n+        <Flex>\r\n+            \r\n+        </Flex>\r\n+    )\r\n }\r\n export default RecentProjects;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693924491469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import React from 'react';\r\n+\r\n+type RecentProjectsProps = {\r\n+    \r\n+};\r\n+\r\n+const RecentProjects:React.FC<RecentProjectsProps> = () => {\r\n+    \r\n+    return(\r\n+        <Flex bg={\"black\"}>\r\n+\r\n+        </Flex>\r\n+    )\r\n+}\r\n+export default RecentProjects;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693924504011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { Flex } from '@chakra-ui/react';\r\n import React from 'react';\r\n \r\n type RecentProjectsProps = {\r\n     \r\n@@ -7,24 +8,9 @@\n const RecentProjects:React.FC<RecentProjectsProps> = () => {\r\n     \r\n     return(\r\n         <Flex bg={\"black\"}>\r\n-\r\n+<Text></Text>\r\n         </Flex>\r\n     )\r\n }\r\n-export default RecentProjects;\n-import React from 'react';\r\n-\r\n-type RecentProjectsProps = {\r\n-    \r\n-};\r\n-\r\n-const RecentProjects:React.FC<RecentProjectsProps> = () => {\r\n-    \r\n-    return(\r\n-        <Flex>\r\n-            \r\n-        </Flex>\r\n-    )\r\n-}\r\n export default RecentProjects;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693924512280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,11 @@\n const RecentProjects:React.FC<RecentProjectsProps> = () => {\r\n     \r\n     return(\r\n         <Flex bg={\"black\"}>\r\n-<Text></Text>\r\n+<Text>\r\n+    Our recent \r\n+</Text>\r\n         </Flex>\r\n     )\r\n }\r\n export default RecentProjects;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693924520600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     \r\n     return(\r\n         <Flex bg={\"black\"}>\r\n <Text>\r\n-    Our recent \r\n+    Our recent projects\r\n </Text>\r\n         </Flex>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1693924546623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Flex } from '@chakra-ui/react';\r\n+import { Flex, Text } from '@chakra-ui/react';\r\n import React from 'react';\r\n \r\n type RecentProjectsProps = {\r\n     \r\n@@ -8,9 +8,9 @@\n const RecentProjects:React.FC<RecentProjectsProps> = () => {\r\n     \r\n     return(\r\n         <Flex bg={\"black\"}>\r\n-<Text>\r\n+<Text color='white' p={\"10px\"}>\r\n     Our recent projects\r\n </Text>\r\n         </Flex>\r\n     )\r\n"
+                },
+                {
+                    "date": 1693924553694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n const RecentProjects:React.FC<RecentProjectsProps> = () => {\r\n     \r\n     return(\r\n         <Flex bg={\"black\"}>\r\n-<Text color='white' p={\"10px\"}>\r\n+<Text color='white' pt={\"10px\"}>\r\n     Our recent projects\r\n </Text>\r\n         </Flex>\r\n     )\r\n"
+                },
+                {
+                    "date": 1693924563400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n const RecentProjects:React.FC<RecentProjectsProps> = () => {\r\n     \r\n     return(\r\n         <Flex bg={\"black\"}>\r\n-<Text color='white' pt={\"10px\"}>\r\n+<Text color='white' pl={\"30px\"} pt={\"20px\"}>\r\n     Our recent projects\r\n </Text>\r\n         </Flex>\r\n     )\r\n"
+                },
+                {
+                    "date": 1693924579996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n const RecentProjects:React.FC<RecentProjectsProps> = () => {\r\n     \r\n     return(\r\n-        <Flex bg={\"black\"}>\r\n+        <Flex mt={\"\"} bg={\"black\"}>\r\n <Text color='white' pl={\"30px\"} pt={\"20px\"}>\r\n     Our recent projects\r\n </Text>\r\n         </Flex>\r\n"
+                },
+                {
+                    "date": 1693925522935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n \r\n const RecentProjects:React.FC<RecentProjectsProps> = () => {\r\n     \r\n     return(\r\n-        <Flex mt={\"\"} bg={\"black\"}>\r\n-<Text color='white' pl={\"30px\"} pt={\"20px\"}>\r\n+        <Flex mt={\"20vh\"} bg={\"black\"}>\r\n+<Text color='white' pl={\"100px\"} pt={\"20px\"}>\r\n     Our recent projects\r\n </Text>\r\n         </Flex>\r\n     )\r\n"
+                },
+                {
+                    "date": 1693925537841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n const RecentProjects:React.FC<RecentProjectsProps> = () => {\r\n     \r\n     return(\r\n-        <Flex mt={\"20vh\"} bg={\"black\"}>\r\n+        <Flex mt={\"20vh\"} height={\"\"} bg={\"black\"}>\r\n <Text color='white' pl={\"100px\"} pt={\"20px\"}>\r\n     Our recent projects\r\n </Text>\r\n         </Flex>\r\n"
+                },
+                {
+                    "date": 1693925552466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n \r\n const RecentProjects:React.FC<RecentProjectsProps> = () => {\r\n     \r\n     return(\r\n-        <Flex mt={\"20vh\"} height={\"\"} bg={\"black\"}>\r\n-<Text color='white' pl={\"100px\"} pt={\"20px\"}>\r\n+        <Flex mt={\"20vh\"} height={\"50vh\"} bg={\"black\"}>\r\n+<Text color='white' pl={\"100px\"} pt={\"70px\"}>\r\n     Our recent projects\r\n </Text>\r\n         </Flex>\r\n     )\r\n"
+                },
+                {
+                    "date": 1693925561359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import { Flex, Text } from '@chakra-ui/react';\r\n+import React from 'react';\r\n+\r\n+type RecentProjectsProps = {\r\n+    \r\n+};\r\n+\r\n+const RecentProjects:React.FC<RecentProjectsProps> = () => {\r\n+    \r\n+    return(\r\n+        <Flex mt={\"20vh\"} height={\"50vh\"} bg={\"black\"}>\r\n+<Text color='white' pl={\"100px\"} pt={{}}>\r\n+    Our recent projects\r\n+</Text>\r\n+        </Flex>\r\n+    )\r\n+}\r\n+export default RecentProjects;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693925567712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n const RecentProjects:React.FC<RecentProjectsProps> = () => {\r\n     \r\n     return(\r\n         <Flex mt={\"20vh\"} height={\"50vh\"} bg={\"black\"}>\r\n-<Text color='white' pl={\"100px\"} pt={{base:\"20px\"}}>\r\n+<Text color='white' pl={\"100px\"} pt={{base:\"20px\",m}}>\r\n     Our recent projects\r\n </Text>\r\n         </Flex>\r\n     )\r\n"
+                },
+                {
+                    "date": 1693925605670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n const RecentProjects:React.FC<RecentProjectsProps> = () => {\r\n     \r\n     return(\r\n         <Flex mt={\"20vh\"} height={\"50vh\"} bg={\"black\"}>\r\n-<Text color='white' pl={{base:\"50px\",md:\"100px\"}} pt={{base:\"20px\",md:\"70px\"}}>\r\n+<Text color='white' pl={{base:\"50px\",md:\"100px\"}} pt={{base:\"20px\",md:\"50px\"}}>\r\n     Our recent projects\r\n </Text>\r\n         </Flex>\r\n     )\r\n"
+                }
+            ],
+            "date": 1693924449650,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\n\r\ntype RecentProjectsProps = {\r\n    \r\n};\r\n\r\nconst RecentProjects:React.FC<RecentProjectsProps> = () => {\r\n    \r\n    return <div>Have a good coding</div>\r\n}\r\nexport default RecentProjects;"
+        }
+    ]
+}

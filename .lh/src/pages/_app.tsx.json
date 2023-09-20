@@ -1,0 +1,114 @@
+{
+    "sourceFile": "src/pages/_app.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 24,
+            "patches": [
+                {
+                    "date": 1693911953121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1693912017899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,6 @@\n-// pages/_app.js\n-import { ChakraProvider } from '@chakra-ui/react'\n+import '@/styles/globals.css'\n+import type { AppProps } from 'next/app'\n \n-function MyApp({ Component, pageProps }) {\n-  return (\n-    <ChakraProvider>\n-      <Component {...pageProps} />\n-    </ChakraProvider>\n-  )\n+export default function App({ Component, pageProps }: AppProps) {\n\\ No newline at end of file\n+  return <Component {...pageProps} />\n }\n-\n-export default MyApp;\n"
+                },
+                {
+                    "date": 1693912033658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,19 @@\n-import '@/styles/globals.css'\n-import type { AppProps } from 'next/app'\n+// app/providers.tsx\n+'use client'\n \n-export default function App({ Component, pageProps }: AppProps) {\n-  return <Component {...pageProps} />\n+import { CacheProvider } from '@chakra-ui/next-js'\n+import { ChakraProvider } from '@chakra-ui/react'\n+\n+export function Providers({ \n+    children \n+  }: { \n+  children: React.ReactNode \n+  }) {\n+  return (\n+    <CacheProvider>\n+      <ChakraProvider>\n+        {children}\n+      </ChakraProvider>\n+    </CacheProvider>\n+  )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693912049528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,6 @@\n-// app/providers.tsx\n-'use client'\n+import '@/styles/globals.css'\n+import type { AppProps } from 'next/app'\n \n-import { CacheProvider } from '@chakra-ui/next-js'\n-import { ChakraProvider } from '@chakra-ui/react'\n-\n-export function Providers({ \n-    children \n-  }: { \n-  children: React.ReactNode \n-  }) {\n-  return (\n-    <CacheProvider>\n-      <ChakraProvider>\n-        {children}\n-      </ChakraProvider>\n-    </CacheProvider>\n\\ No newline at end of file\n-  )\n-}\n+export default function App({ Component, pageProps }: AppProps) {\n+  return <Component {...pageProps} />\n+}\n"
+                },
+                {
+                    "date": 1693912082374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,19 @@\n-import '@/styles/globals.css'\n-import type { AppProps } from 'next/app'\n+// app/providers.tsx\n+'use client'\n \n-export default function App({ Component, pageProps }: AppProps) {\n-  return <Component {...pageProps} />\n-}\n+import { CacheProvider } from '@chakra-ui/next-js'\n+import { ChakraProvider } from '@chakra-ui/react'\n+\n+export function Providers({ \n+    children \n+  }: { \n+  children: React.ReactNode \n+  }) {\n+  return (\n+    <CacheProvider>\n+      <ChakraProvider>\n+        {children}\n+      </ChakraProvider>\n+    </CacheProvider>\n+  )\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693912100017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,12 @@\n-// app/providers.tsx\n-'use client'\n-\n-import { CacheProvider } from '@chakra-ui/next-js'\n+// pages/_app.js\n import { ChakraProvider } from '@chakra-ui/react'\n \n-export function Providers({ \n-    children \n-  }: { \n-  children: React.ReactNode \n-  }) {\n+function MyApp({ Component, pageProps }) {\n   return (\n-    <CacheProvider>\n-      <ChakraProvider>\n-        {children}\n-      </ChakraProvider>\n-    </CacheProvider>\n\\ No newline at end of file\n+    <ChakraProvider>\n+      <Component {...pageProps} />\n+    </ChakraProvider>\n   )\n-}\n+}\n+\n+export default MyApp;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693912114997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n // pages/_app.js\n import { ChakraProvider } from '@chakra-ui/react'\n \n-function MyApp({ Component, pageProps }) {\n+function MyApp({ Component, pageProps }: AppProps) {\n   return (\n     <ChakraProvider>\n       <Component {...pageProps} />\n     </ChakraProvider>\n"
+                },
+                {
+                    "date": 1693912123558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,6 @@\n-// pages/_app.js\n-import { ChakraProvider } from '@chakra-ui/react'\n+import '@/styles/globals.css'\n+import type { AppProps } from 'next/app'\n \n-function MyApp({ Component, pageProps }: AppProps) {\n-  return (\n-    <ChakraProvider>\n-      <Component {...pageProps} />\n-    </ChakraProvider>\n-  )\n+export default function App({ Component, pageProps }: AppProps) {\n\\ No newline at end of file\n+  return <Component {...pageProps} />\n }\n-\n-export default MyApp;\n"
+                },
+                {
+                    "date": 1693912134179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,18 @@\n import type { AppProps } from 'next/app'\n \n export default function App({ Component, pageProps }: AppProps) {\n   return <Component {...pageProps} />\n-}\n\\ No newline at end of file\n+}\n+\n+// pages/_app.js\n+import { ChakraProvider } from '@chakra-ui/react'\n+\n+function MyApp({ Component, pageProps }) {\n+  return (\n+    <ChakraProvider>\n+      <Component {...pageProps} />\n+    </ChakraProvider>\n+  )\n+}\n+\n+export default MyApp;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693912140452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import '@/styles/globals.css'\n import type { AppProps } from 'next/app'\n \n-export default function App({ Component, pageProps }: AppProps) {\n+export default function App() {\n   return <Component {...pageProps} />\n }\n \n // pages/_app.js\n"
+                },
+                {
+                    "date": 1693912149468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,13 @@\n import '@/styles/globals.css'\n import type { AppProps } from 'next/app'\n \n-export default function App() {\n-  return <Component {...pageProps} />\n-}\n \n+\n // pages/_app.js\n import { ChakraProvider } from '@chakra-ui/react'\n \n-function MyApp({ Component, pageProps }) {\n+function MyApp({ Component, pageProps }: AppProps) {\n   return (\n     <ChakraProvider>\n       <Component {...pageProps} />\n     </ChakraProvider>\n"
+                },
+                {
+                    "date": 1693986880461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n import '@/styles/globals.css'\n import type { AppProps } from 'next/app'\n \n \n-\n // pages/_app.js\n import { ChakraProvider } from '@chakra-ui/react'\n \n function MyApp({ Component, pageProps }: AppProps) {\n   return (\n     <ChakraProvider>\n+      <Nav\n       <Component {...pageProps} />\n     </ChakraProvider>\n   )\n }\n"
+                },
+                {
+                    "date": 1693986893821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,13 @@\n import '@/styles/globals.css'\n import type { AppProps } from 'next/app'\n-\n-\n-// pages/_app.js\n import { ChakraProvider } from '@chakra-ui/react'\n+import Navbar from '@/components/Navbar';\n \n function MyApp({ Component, pageProps }: AppProps) {\n   return (\n     <ChakraProvider>\n-      <Nav\n+      <Navbar/>\n       <Component {...pageProps} />\n     </ChakraProvider>\n   )\n }\n"
+                },
+                {
+                    "date": 1693987208362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \n function MyApp({ Component, pageProps }: AppProps) {\n   return (\n     <ChakraProvider>\n-      <Navbar/>\n+      {/* <Navbar/> */}\n       <Component {...pageProps} />\n     </ChakraProvider>\n   )\n }\n"
+                },
+                {
+                    "date": 1693987219556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import '@/styles/globals.css'\n+import type { AppProps } from 'next/app'\n+import { ChakraProvider } from '@chakra-ui/react'\n+import Navbar from '@/components/Navbar';\n+\n+function MyApp({ Component, pageProps }: AppProps) {\n+  return (\n+    <ChakraProvider>\n+      <Navbar/>\n+      <Component {...pageProps} />\n+    </ChakraProvider>\n+  )\n+}\n+\n+export default MyApp;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693987484634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,23 +5,8 @@\n \n function MyApp({ Component, pageProps }: AppProps) {\n   return (\n     <ChakraProvider>\n-      <Navbar/>\n-      <Component {...pageProps} />\n-    </ChakraProvider>\n-  )\n-}\n-\n-export default MyApp;\n-import '@/styles/globals.css'\n-import type { AppProps } from 'next/app'\n-import { ChakraProvider } from '@chakra-ui/react'\n-import Navbar from '@/components/Navbar';\n-\n-function MyApp({ Component, pageProps }: AppProps) {\n-  return (\n-    <ChakraProvider>\n       {/* <Navbar/> */}\n       <Component {...pageProps} />\n     </ChakraProvider>\n   )\n"
+                },
+                {
+                    "date": 1693987745092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \n function MyApp({ Component, pageProps }: AppProps) {\n   return (\n     <ChakraProvider>\n-      {/* <Navbar/> */}\n+      <Navbar/>\n       <Component {...pageProps} />\n     </ChakraProvider>\n   )\n }\n"
+                },
+                {
+                    "date": 1694074429801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import '@/styles/globals.css'\n import type { AppProps } from 'next/app'\n import { ChakraProvider } from '@chakra-ui/react'\n import Navbar from '@/components/Navbar';\n+import \n \n function MyApp({ Component, pageProps }: AppProps) {\n   return (\n     <ChakraProvider>\n"
+                },
+                {
+                    "date": 1694074440238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import '@/styles/globals.css'\n import type { AppProps } from 'next/app'\n import { ChakraProvider } from '@chakra-ui/react'\n import Navbar from '@/components/Navbar';\n-import \n \n+\n function MyApp({ Component, pageProps }: AppProps) {\n   return (\n     <ChakraProvider>\n       <Navbar/>\n"
+                },
+                {
+                    "date": 1694074481761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import '@/styles/globals.css'\n import type { AppProps } from 'next/app'\n import { ChakraProvider } from '@chakra-ui/react'\n import Navbar from '@/components/Navbar';\n+import {useRouter} from \"next/router\"\n \n \n function MyApp({ Component, pageProps }: AppProps) {\n   return (\n"
+                },
+                {
+                    "date": 1694074493666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n import {useRouter} from \"next/router\"\n \n \n function MyApp({ Component, pageProps }: AppProps) {\n+  const router=useRouter()\n   return (\n     <ChakraProvider>\n       <Navbar/>\n       <Component {...pageProps} />\n"
+                },
+                {
+                    "date": 1694074509882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n function MyApp({ Component, pageProps }: AppProps) {\n   const router=useRouter()\n   return (\n     <ChakraProvider>\n-      <Navbar/>\n+      \n       <Component {...pageProps} />\n     </ChakraProvider>\n   )\n }\n"
+                },
+                {
+                    "date": 1694074517775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import '@/styles/globals.css'\n+import type { AppProps } from 'next/app'\n+import { ChakraProvider } from '@chakra-ui/react'\n+import Navbar from '@/components/Navbar';\n+import {useRouter} from \"next/router\"\n+\n+\n+function MyApp({ Component, pageProps }: AppProps) {\n+  const router=useRouter()\n+  return (\n+    <ChakraProvider>\n+      {router.pathname}\n+      <Component {...pageProps} />\n+    </ChakraProvider>\n+  )\n+}\n+\n+export default MyApp;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694074525215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,29 +8,11 @@\n function MyApp({ Component, pageProps }: AppProps) {\n   const router=useRouter()\n   return (\n     <ChakraProvider>\n-      {router.pathname}\n+      {router.pathname.includes('admin')}\n       <Component {...pageProps} />\n     </ChakraProvider>\n   )\n }\n \n-export default MyApp;\n-import '@/styles/globals.css'\n-import type { AppProps } from 'next/app'\n-import { ChakraProvider } from '@chakra-ui/react'\n-import Navbar from '@/components/Navbar';\n-import {useRouter} from \"next/router\"\n-\n-\n-function MyApp({ Component, pageProps }: AppProps) {\n-  const router=useRouter()\n-  return (\n-    <ChakraProvider>\n-      \n-      <Component {...pageProps} />\n-    </ChakraProvider>\n-  )\n-}\n-\n export default MyApp;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694074551666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n function MyApp({ Component, pageProps }: AppProps) {\n   const router=useRouter()\n   return (\n     <ChakraProvider>\n-      {router.pathname.includes('admin')}\n+      {!router.pathname.includes('admin') && <Navbar/> }\n       <Component {...pageProps} />\n     </ChakraProvider>\n   )\n }\n"
+                }
+            ],
+            "date": 1693911953121,
+            "name": "Commit-0",
+            "content": "// pages/_app.js\nimport { ChakraProvider } from '@chakra-ui/react'\n\nfunction MyApp({ Component, pageProps }) {\n  return (\n    <ChakraProvider>\n      <Component {...pageProps} />\n    </ChakraProvider>\n  )\n}\n\nexport default MyApp;"
+        }
+    ]
+}

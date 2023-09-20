@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/pages/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1693910978051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1693911069514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,6 @@\n import Image from 'next/image'\n-import { Inter } from 'next/font/google'\n \n-const inter = Inter({ subsets: ['latin'] })\n \n export default function Home() {\n   return (\n     <main\n"
+                },
+                {
+                    "date": 1693911078086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n export default function Home() {\n   return (\n     <main\n-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}\n+      className={`flex min-h-screen flex-col items-center justify-between p-24 `}\n     >\n       \n              \n      \n"
+                },
+                {
+                    "date": 1693911953249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,8 @@\n \n \n export default function Home() {\n   return (\n-    <main\n-      className={`flex min-h-screen flex-col items-center justify-between p-24 `}\n-    >\n-      \n-             \n-     \n-\n-        \n-    </main>\n+    <>\n+    </>\n   )\n }\n"
+                },
+                {
+                    "date": 1693912174493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,8 @@\n \n export default function Home() {\n   return (\n     <>\n+    Hello world\n     </>\n   )\n }\n"
+                },
+                {
+                    "date": 1693912218165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n export default function Home() {\n   return (\n     <>\n     Hello world\n-    \n+    <\n     </>\n   )\n }\n"
+                },
+                {
+                    "date": 1693920161845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n export default function Home() {\n   return (\n     <>\n- \n+\n     <Hero/>\n     </>\n   )\n }\n"
+                }
+            ],
+            "date": 1693910978051,
+            "name": "Commit-0",
+            "content": "import Image from 'next/image'\nimport { Inter } from 'next/font/google'\n\nconst inter = Inter({ subsets: ['latin'] })\n\nexport default function Home() {\n  return (\n    <main\n      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}\n    >\n      \n             \n     \n\n        \n    </main>\n  )\n}\n"
+        }
+    ]
+}

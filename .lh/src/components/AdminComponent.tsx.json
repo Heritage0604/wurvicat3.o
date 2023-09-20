@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/components/AdminComponent.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1694089206203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694096073349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,11 @@\n-tfcd\n\\ No newline at end of file\n+import React from 'react';\r\n+\r\n+type AdminComponentProps = {\r\n+    \r\n+};\r\n+\r\n+const AdminComponent:React.FC<AdminComponentProps> = () => {\r\n+    \r\n+    return <Flex></Flex>\r\n+}\r\n+export default AdminComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694096094750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import React from 'react';\r\n+import { Flex,Text } from '@chakra-ui/react';\r\n \r\n type AdminComponentProps = {\r\n     \r\n };\r\n"
+                },
+                {
+                    "date": 1694096103807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react';\r\n-import { Flex,Text } from '@chakra-ui/react';\r\n+import { Flex,Text,Image,Link } from '@chakra-ui/react';\r\n \r\n type AdminComponentProps = {\r\n     \r\n };\r\n"
+                },
+                {
+                    "date": 1694096321084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import React from 'react';\r\n+import { Flex,Text,Image,Link } from '@chakra-ui/react';\r\n+\r\n+type AdminComponentProps = {\r\n+    \r\n+};\r\n+\r\n+const AdminComponent:React.FC<AdminComponentProps> = () => {\r\n+    \r\n+    return <Flex>\r\n+        \r\n+    </Flex>\r\n+}\r\n+export default AdminComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694096412189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,21 +6,9 @@\n };\r\n \r\n const AdminComponent:React.FC<AdminComponentProps> = () => {\r\n     \r\n-    return <Flex>\r\n-        \r\n+    return <Flex boxShadow='sm' p='3' rounded='md' bg='white'>\r\n+\r\n     </Flex>\r\n }\r\n-export default AdminComponent;\n-import React from 'react';\r\n-import { Flex,Text,Image,Link } from '@chakra-ui/react';\r\n-\r\n-type AdminComponentProps = {\r\n-    \r\n-};\r\n-\r\n-const AdminComponent:React.FC<AdminComponentProps> = () => {\r\n-    \r\n-    return <Flex></Flex>\r\n-}\r\n export default AdminComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694096419002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n };\r\n \r\n const AdminComponent:React.FC<AdminComponentProps> = () => {\r\n     \r\n-    return <Flex boxShadow='sm' p='3' rounded='md' bg='white'>\r\n+    return <Flex  boxShadow='sm' p='3' rounded='md' bg='white'>\r\n \r\n     </Flex>\r\n }\r\n export default AdminComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694096424662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n };\r\n \r\n const AdminComponent:React.FC<AdminComponentProps> = () => {\r\n     \r\n-    return <Flex  boxShadow='sm' p='3' rounded='md' bg='white'>\r\n+    return <Flex mt={{base:\"0\"}} boxShadow='sm' p='3' rounded='md' bg='white'>\r\n \r\n     </Flex>\r\n }\r\n export default AdminComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694096451063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n \r\n const AdminComponent:React.FC<AdminComponentProps> = () => {\r\n     \r\n     return <Flex mt={{base:\"10vh\",lg:\"0\"}} boxShadow='sm' p='3' rounded='md' bg='white'>\r\n-H\r\n+Hello\r\n     </Flex>\r\n }\r\n export default AdminComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694096461050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n };\r\n \r\n const AdminComponent:React.FC<AdminComponentProps> = () => {\r\n     \r\n-    return <Flex mt={{base:\"10vh\",lg:\"0\"}} boxShadow='sm' p='3' rounded='md' bg='white'>\r\n+    return <Flex mt={{base:\"5vh\",lg:\"0\"}} boxShadow='sm' p='3' rounded='md' bg='white'>\r\n Hello\r\n     </Flex>\r\n }\r\n export default AdminComponent;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1694089206203,
+            "name": "Commit-0",
+            "content": "tfcd"
+        }
+    ]
+}

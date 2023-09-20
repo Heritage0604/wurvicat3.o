@@ -1,0 +1,74 @@
+{
+    "sourceFile": "src/pages/about.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1693989222004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1693989531469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,11 @@\n-rafce\n\\ No newline at end of file\n+import React from 'react'\r\n+\r\n+const about = () => {\r\n+  return (\r\n+    <Flex>\r\n+        \r\n+    </Flex>\r\n+  )\r\n+}\r\n+\r\n+export default about\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693989542279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n+import { Flex,Image,Text, } from '@chakra-ui/react'\r\n import React from 'react'\r\n \r\n const about = () => {\r\n   return (\r\n     <Flex>\r\n-        \r\n+\r\n     </Flex>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1693989550845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Flex,Image,Text, } from '@chakra-ui/react'\r\n+import { Flex,Image,Text } from '@chakra-ui/react'\r\n import React from 'react'\r\n \r\n const about = () => {\r\n   return (\r\n"
+                },
+                {
+                    "date": 1693989580701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n \r\n const about = () => {\r\n   return (\r\n     <Flex>\r\n-\r\n+<Flex>\r\n+    <Image src=\"\"\r\n+</Flex>\r\n     </Flex>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1693989587238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const about = () => {\r\n   return (\r\n     <Flex>\r\n <Flex>\r\n-    <Image src=\"\"\r\n+    <Image src=\"/about.avif\"\r\n </Flex>\r\n     </Flex>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1693989593231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const about = () => {\r\n   return (\r\n     <Flex>\r\n <Flex>\r\n-    <Image src=\"/about.avif\"\r\n+    <Image src=\"/about.avif\" alt=\"about us\"\r\n </Flex>\r\n     </Flex>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1693989615907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n \r\n const about = () => {\r\n   return (\r\n     <Flex>\r\n-<Flex>\r\n-    <Image src=\"/about.avif\" alt=\"about us\"\r\n+<Flex width={\"100vw\"}>\r\n+    <Image src=\"/about.avif\" alt=\"about us\"/>\r\n </Flex>\r\n     </Flex>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1693989625776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const about = () => {\r\n   return (\r\n     <Flex>\r\n <Flex width={\"100vw\"}>\r\n-    <Image src=\"/about.avif\" alt=\"about us\"/>\r\n+    <Image width={\"100%\"} src=\"/about.avif\" alt=\"about us\"/>\r\n </Flex>\r\n     </Flex>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1693989644924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const about = () => {\r\n   return (\r\n     <Flex>\r\n <Flex width={\"100vw\"}>\r\n-    <Image width={\"100%\"} src=\"/about.avif\" alt=\"about us\"/>\r\n+    <Image width={\"100%\"} wi src=\"/about.avif\" alt=\"about us\"/>\r\n </Flex>\r\n     </Flex>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1693989675320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const about = () => {\r\n   return (\r\n     <Flex>\r\n <Flex width={\"100vw\"}>\r\n-    <Image width={\"100%\"} wi src=\"/about.avif\" alt=\"about us\"/>\r\n+    <Image className=' w-screen h-[32rem]   overflow-x-hidden object-cover'  src=\"/about.avif\" alt=\"about us\"/>\r\n </Flex>\r\n     </Flex>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1693989697966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n   return (\r\n     <Flex>\r\n <Flex width={\"100vw\"}>\r\n     <Image className=' w-screen h-[32rem]   overflow-x-hidden object-cover'  src=\"/about.avif\" alt=\"about us\"/>\r\n+    \r\n </Flex>\r\n     </Flex>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1693989705663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n \r\n const about = () => {\r\n   return (\r\n     <Flex>\r\n-<Flex width={\"100vw\"}>\r\n+<Flex position=\"relative\" width={\"100vw\"}>\r\n     <Image className=' w-screen h-[32rem]   overflow-x-hidden object-cover'  src=\"/about.avif\" alt=\"about us\"/>\r\n-    \r\n+\r\n </Flex>\r\n     </Flex>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1693989728751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   return (\r\n     <Flex>\r\n <Flex position=\"relative\" width={\"100vw\"}>\r\n     <Image className=' w-screen h-[32rem]   overflow-x-hidden object-cover'  src=\"/about.avif\" alt=\"about us\"/>\r\n-<Text position=\"ab\">About Us</Text>\r\n+<Text position=\"absolute\">About Us</Text>\r\n </Flex>\r\n     </Flex>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1693989736381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   return (\r\n     <Flex>\r\n <Flex position=\"relative\" width={\"100vw\"}>\r\n     <Image className=' w-screen h-[32rem]   overflow-x-hidden object-cover'  src=\"/about.avif\" alt=\"about us\"/>\r\n-<Text position=\"absolute\" fontSize={\"30px\"}>About Us</Text>\r\n+<Text position=\"absolute\" c fontSize={\"30px\"}>About Us</Text>\r\n </Flex>\r\n     </Flex>\r\n   )\r\n }\r\n"
+                }
+            ],
+            "date": 1693989222004,
+            "name": "Commit-0",
+            "content": "rafce"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/components/TotalItems.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1694082021651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694082059282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+import React from 'react'\r\n+\r\n+const TotalItems = () => {\r\n+  return (\r\n+    <div>\r\n+        \r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default TotalItems\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694082065636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,9 @@\n import React from 'react'\r\n \r\n const TotalItems = () => {\r\n   return (\r\n-    <div>\r\n-        \r\n-    </div>\r\n+   \r\n   )\r\n }\r\n \r\n export default TotalItems\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694082077363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n+import { Flex } from '@chakra-ui/react'\r\n import React from 'react'\r\n \r\n const TotalItems = () => {\r\n   return (\r\n-   \r\n+   <Flex></Flex>\r\n+\r\n   )\r\n }\r\n\\ No newline at end of file\n \r\n-export default TotalItems\n-rafce\n+export default TotalItems\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694082086848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const TotalItems = () => {\r\n   return (\r\n    <Flex mt={\"20vh\"}>\r\n-\r\n+He\r\n    </Flex>\r\n \r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1694082109427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,11 @@\n import React from 'react'\r\n \r\n const TotalItems = () => {\r\n   return (\r\n-   <Flex flexDir= mt={\"20vh\"}>\r\n+   <Flex flexDir={{base;\"\"}} mt={\"20vh\"}>\r\n Hello world\r\n-   </FlexflexDir=>\r\n+   </Flex>\r\n \r\n   )\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1694082021651,
+            "name": "Commit-0",
+            "content": "rafce"
+        }
+    ]
+}

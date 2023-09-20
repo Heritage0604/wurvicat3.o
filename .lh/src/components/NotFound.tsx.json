@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/components/NotFound.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1695203182275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695203250793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,21 @@\n-import React from 'react'\r\n+import React from \"react\";\r\n+import { Flex, Button } from \"@chakra-ui/react\";\r\n+import Link from \"next/link\";\r\n \r\n-const NotFound = () => {\r\n+const CommunityNotFound: React.FC = () => {\r\n   return (\r\n-    <div>NotFound</div>\r\n\\ No newline at end of file\n-  )\r\n-}\r\n-\r\n-export default NotFound\n+    <Flex\r\n+      direction=\"column\"\r\n+      justifyContent=\"center\"\r\n+      alignItems=\"center\"\r\n+      minHeight=\"60vh\"\r\n+    >\r\n+      Sorry, that community does not exist or has been banned\r\n+      \r\n+      <Link href=\"/\">\r\n+        <Button mt={4}>GO HOME</Button>\r\n+      </Link>\r\n+    </Flex>\r\n+  );\r\n+};\r\n+export default CommunityNotFound;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695203289777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from \"react\";\r\n import { Flex, Button } from \"@chakra-ui/react\";\r\n import Link from \"next/link\";\r\n \r\n-const CommunityNotFound: React.FC = () => {\r\n+const NotFound: React.FC = () => {\r\n   return (\r\n     <Flex\r\n       direction=\"column\"\r\n       justifyContent=\"center\"\r\n@@ -17,5 +17,5 @@\n       </Link>\r\n     </Flex>\r\n   );\r\n };\r\n-export default CommunityNotFound;\n\\ No newline at end of file\n+export default NotFound;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695203298432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n       justifyContent=\"center\"\r\n       alignItems=\"center\"\r\n       minHeight=\"60vh\"\r\n     >\r\n-      Sorry, that community does not exist or has been banned\r\n+      Sorry, that page does not exist or has been banned\r\n       \r\n       <Link href=\"/\">\r\n         <Button mt={4}>GO HOME</Button>\r\n       </Link>\r\n"
+                }
+            ],
+            "date": 1695203182275,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst NotFound = () => {\r\n  return (\r\n    <div>NotFound</div>\r\n  )\r\n}\r\n\r\nexport default NotFound"
+        }
+    ]
+}

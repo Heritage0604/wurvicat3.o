@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/components/Loaction.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1694009414211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694009550779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,11 @@\n-rafce\n\\ No newline at end of file\n+import React from 'react'\r\n+\r\n+const Loaction = () => {\r\n+  return (\r\n+    <Flex>\r\n+        \r\n+    </Flex>\r\n+  )\r\n+}\r\n+\r\n+export default Loaction\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694009658584,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,13 @@\n+import { Flex } from '@chakra-ui/react'\r\n import React from 'react'\r\n \r\n const Loaction = () => {\r\n   return (\r\n     <Flex>\r\n-        \r\n+<Flex>\r\n+    \r\n+</Flex>\r\n     </Flex>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1694009670042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import { Flex } from '@chakra-ui/react'\r\n+import React from 'react'\r\n+\r\n+const Loaction = () => {\r\n+  return (\r\n+    <Flex>\r\n+<Flex>\r\n+    <Flex></Flex>\r\n+</Flex>\r\n+    </Flex>\r\n+  )\r\n+}\r\n+\r\n+export default Loaction\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694009681468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import { Flex } from '@chakra-ui/react'\r\n+import React from 'react'\r\n+\r\n+const Loaction = () => {\r\n+  return (\r\n+    <Flex>\r\n+<Flex>\r\n+    <Flex></Flex>\r\n+    <Flex></Flex>\r\n+</Flex>\r\n+    </Flex>\r\n+  )\r\n+}\r\n+\r\n+export default Loaction\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694009700185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,42 +2,14 @@\n import React from 'react'\r\n \r\n const Loaction = () => {\r\n   return (\r\n-    <Flex>\r\n+    <Flex mt={\"5vh\"}>\r\n <Flex>\r\n     <Flex></Flex>\r\n     <Flex></Flex>\r\n </Flex>\r\n     </Flex>\r\n   )\r\n }\r\n \r\n-export default Loaction\n-import { Flex } from '@chakra-ui/react'\r\n-import React from 'react'\r\n-\r\n-const Loaction = () => {\r\n-  return (\r\n-    <Flex>\r\n-<Flex>\r\n-    <Flex></Flex>\r\n-</Flex>\r\n-    </Flex>\r\n-  )\r\n-}\r\n-\r\n-export default Loaction\n-import { Flex } from '@chakra-ui/react'\r\n-import React from 'react'\r\n-\r\n-const Loaction = () => {\r\n-  return (\r\n-    <Flex>\r\n-<Flex>\r\n-    \r\n-</Flex>\r\n-    </Flex>\r\n-  )\r\n-}\r\n-\r\n export default Loaction\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694009713861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n \r\n const Loaction = () => {\r\n   return (\r\n     <Flex mt={\"5vh\"}>\r\n-<Flex>\r\n+<Flex border={\"1px solid red\"}>\r\n+    Hello\r\n     <Flex></Flex>\r\n     <Flex></Flex>\r\n </Flex>\r\n     </Flex>\r\n"
+                },
+                {
+                    "date": 1694009720804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import { Flex } from '@chakra-ui/react'\r\n+import React from 'react'\r\n+\r\n+const Loaction = () => {\r\n+  return (\r\n+    <Flex width={\"100%\"} mt={\"5vh\"}>\r\n+<Flex border={\"1px solid red\"}>\r\n+    Hello\r\n+    <Flex></Flex>\r\n+    <Flex></Flex>\r\n+</Flex>\r\n+    </Flex>\r\n+  )\r\n+}\r\n+\r\n+export default Loaction\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694009728753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,30 +3,14 @@\n \r\n const Loaction = () => {\r\n   return (\r\n     <Flex width={\"100%\"} mt={\"5vh\"}>\r\n-<Flex border={\"1px solid red\"}>\r\n+<Flex width={\"\"} border={\"1px solid red\"}>\r\n     Hello\r\n     <Flex></Flex>\r\n     <Flex></Flex>\r\n </Flex>\r\n     </Flex>\r\n   )\r\n }\r\n \r\n-export default Loaction\n-import { Flex } from '@chakra-ui/react'\r\n-import React from 'react'\r\n-\r\n-const Loaction = () => {\r\n-  return (\r\n-    <Flex mt={\"5vh\"}>\r\n-<Flex border={\"1px solid red\"}>\r\n-    Hello\r\n-    <Flex></Flex>\r\n-    <Flex></Flex>\r\n-</Flex>\r\n-    </Flex>\r\n-  )\r\n-}\r\n-\r\n export default Loaction\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694009738578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const Loaction = () => {\r\n   return (\r\n     <Flex width={\"100%\"} mt={\"5vh\"}>\r\n-<Flex width={\"\"} border={\"1px solid red\"}>\r\n+<Flex width={{base:\"100%\"}} border={\"1px solid red\"}>\r\n     Hello\r\n     <Flex></Flex>\r\n     <Flex></Flex>\r\n </Flex>\r\n"
+                },
+                {
+                    "date": 1694009752627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\r\n \r\n const Loaction = () => {\r\n   return (\r\n-    <Flex width={\"100%\"} mt={\"5vh\"}>\r\n+    <Flex width={\"100%\"} justify=\"centre\" mt={\"5vh\"}>\r\n <Flex width={{base:\"100%\",md:\"80%\"}} border={\"1px solid red\"}>\r\n     Hello\r\n     <Flex></Flex>\r\n     <Flex></Flex>\r\n"
+                },
+                {
+                    "date": 1694009771236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import { Flex,Text,Image } from '@chakra-ui/react'\r\n+import React from 'react'\r\n+\r\n+const Loaction = () => {\r\n+  return (\r\n+    <Flex width={\"100%\"} justify=\"center\" mt={\"5vh\"}>\r\n+<Flex width={{base:\"100%\",md:\"80%\"}} border={\"1px solid red\"}>\r\n+    Hello\r\n+    <Flex>\r\n+        <Text\r\n+    </Flex>\r\n+    <Flex></Flex>\r\n+</Flex>\r\n+    </Flex>\r\n+  )\r\n+}\r\n+\r\n+export default Loaction\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1694009414211,
+            "name": "Commit-0",
+            "content": "rafce"
+        }
+    ]
+}

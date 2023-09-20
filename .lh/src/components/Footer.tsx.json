@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/Footer.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1693937522171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1693937569557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const Footer = () => {\r\n   return (\r\n-    <f\r\n+    <\r\n   )\r\n }\r\n \r\n export default Footer\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693937998311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const Footer = () => {\r\n   return (\r\n     <Flex flexDir={\"column\"} bg={\"orange.400\"}>\r\n-<Flex>Hello wr</Flex>\r\n+<Flex>Hello w</Flex>\r\n     </Flex>\r\n   )\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1693937522171,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst Footer = () => {\r\n  return (\r\n    <div>Footer</div>\r\n  )\r\n}\r\n\r\nexport default Footer"
+        }
+    ]
+}

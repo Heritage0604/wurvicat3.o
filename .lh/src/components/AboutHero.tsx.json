@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/components/AboutHero.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1693990226134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1693990252402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,13 @@\n import React from 'react'\r\n \r\n const AboutHero = () => {\r\n   return (\r\n-    <div>AboutHero</div>\r\n+      <Flex>\r\n+<Flex position=\"relative\" width={\"100vw\"}>\r\n+    <Image className=' w-screen h-[32rem]   overflow-x-hidden object-cover'  src=\"/about.avif\" alt=\"about us\"/>\r\n+<Text position=\"absolute\" top={{base:'50%',md:'50%'}} left={\"50%\"} transform={'translate(-50%, -50%)'} color={\"white\"} fontSize={{base:\"30px\",md:\"50px\"}}>About Us</Text>\r\n+</Flex>\r\n   )\r\n }\r\n \r\n export default AboutHero\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693990267711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-\r\n+import { Flex,Image,Text } from '@chakra-ui/react'\r\n const AboutHero = () => {\r\n   return (\r\n       <Flex>\r\n <Flex position=\"relative\" width={\"100vw\"}>\r\n"
+                },
+                {
+                    "date": 1693990305178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n <Flex position=\"relative\" width={\"100vw\"}>\r\n     <Image className=' w-screen h-[32rem]   overflow-x-hidden object-cover'  src=\"/about.avif\" alt=\"about us\"/>\r\n <Text position=\"absolute\" top={{base:'50%',md:'50%'}} left={\"50%\"} transform={'translate(-50%, -50%)'} color={\"white\"} fontSize={{base:\"30px\",md:\"50px\"}}>About Us</Text>\r\n </Flex>\r\n+</Flex>\r\n   )\r\n }\r\n \r\n export default AboutHero\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693990337178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const AboutHero = () => {\r\n   return (\r\n       <Flex>\r\n <Flex position=\"relative\" width={\"100vw\"}>\r\n-    <Image className=' w-screen h-[32rem]   overflow-x-hidden object-cover'  src=\"/about.avif\" alt=\"about us\"/>\r\n+    <Image className=' w-screen h-[20rem]   overflow-x-hidden object-cover'  src=\"/about.avif\" alt=\"about us\"/>\r\n <Text position=\"absolute\" top={{base:'50%',md:'50%'}} left={\"50%\"} transform={'translate(-50%, -50%)'} color={\"white\"} fontSize={{base:\"30px\",md:\"50px\"}}>About Us</Text>\r\n </Flex>\r\n </Flex>\r\n   )\r\n"
+                },
+                {
+                    "date": 1693990351608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const AboutHero = () => {\r\n   return (\r\n       <Flex>\r\n <Flex position=\"relative\" width={\"100vw\"}>\r\n-    <Image className=' w-screen h-[20rem]   overflow-x-hidden object-cover'  src=\"/about.avif\" alt=\"about us\"/>\r\n+    <Image className=' w-screen h-[20rem] md:h-[]   overflow-x-hidden object-cover'  src=\"/about.avif\" alt=\"about us\"/>\r\n <Text position=\"absolute\" top={{base:'50%',md:'50%'}} left={\"50%\"} transform={'translate(-50%, -50%)'} color={\"white\"} fontSize={{base:\"30px\",md:\"50px\"}}>About Us</Text>\r\n </Flex>\r\n </Flex>\r\n   )\r\n"
+                },
+                {
+                    "date": 1693990363066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const AboutHero = () => {\r\n   return (\r\n       <Flex>\r\n <Flex position=\"relative\" width={\"100vw\"}>\r\n-    <Image className=' w-screen h-[20rem] md:h-[]   overflow-x-hidden object-cover'  src=\"/about.avif\" alt=\"about us\"/>\r\n+    <Image className=' w-screen h-[20rem] md:h-[25rem]   overflow-x-hidden object-cover'  src=\"/about.avif\" alt=\"about us\"/>\r\n <Text position=\"absolute\" top={{base:'50%',md:'50%'}} left={\"50%\"} transform={'translate(-50%, -50%)'} color={\"white\"} fontSize={{base:\"30px\",md:\"50px\"}}>About Us</Text>\r\n </Flex>\r\n </Flex>\r\n   )\r\n"
+                },
+                {
+                    "date": 1693990370188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const AboutHero = () => {\r\n   return (\r\n       <Flex>\r\n <Flex position=\"relative\" width={\"100vw\"}>\r\n-    <Image className=' w-screen h-[20rem] md:h-[25rem]   overflow-x-hidden object-cover'  src=\"/about.avif\" alt=\"about us\"/>\r\n+    <Image className=' w-screen h-[20rem] md:h-[30rem]   overflow-x-hidden object-cover'  src=\"/about.avif\" alt=\"about us\"/>\r\n <Text position=\"absolute\" top={{base:'50%',md:'50%'}} left={\"50%\"} transform={'translate(-50%, -50%)'} color={\"white\"} fontSize={{base:\"30px\",md:\"50px\"}}>About Us</Text>\r\n </Flex>\r\n </Flex>\r\n   )\r\n"
+                },
+                {
+                    "date": 1693990449043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n import { Flex,Image,Text } from '@chakra-ui/react'\r\n const AboutHero = () => {\r\n   return (\r\n-      <Flex flexD>\r\n+      <Flex flex>\r\n <Flex position=\"relative\" width={\"100vw\"}>\r\n     <Image className=' w-screen h-[20rem] md:h-[30rem]   overflow-x-hidden object-cover'  src=\"/about.avif\" alt=\"about us\"/>\r\n <Text position=\"absolute\" top={{base:'50%',md:'50%'}} left={\"50%\"} transform={'translate(-50%, -50%)'} color={\"white\"} fontSize={{base:\"30px\",md:\"50px\"}}>About Us</Text>\r\n </Flex>\r\n"
+                },
+                {
+                    "date": 1693998107063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,5 @@\n </Flex>\r\n   )\r\n }\r\n \r\n-export default AboutHero\n\\ No newline at end of file\n+export default AboutHero\r\n"
+                }
+            ],
+            "date": 1693990226134,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst AboutHero = () => {\r\n  return (\r\n    <div>AboutHero</div>\r\n  )\r\n}\r\n\r\nexport default AboutHero"
+        }
+    ]
+}

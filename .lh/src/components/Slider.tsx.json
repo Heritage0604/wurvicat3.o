@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/components/Slider.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1693912823532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1693913815484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,38 @@\n-tfcd\n\\ No newline at end of file\n+import React from 'react';\r\n+import Carousel from \"react-multi-carousel\";\r\n+import \"react-multi-carousel/lib/styles.css\";\r\n+const responsive = {\r\n+  superLargeDesktop: {\r\n+    // the naming can be any, depends on you.\r\n+    breakpoint: { max: 4000, min: 3000 },\r\n+    items: 5\r\n+  },\r\n+  desktop: {\r\n+    breakpoint: { max: 3000, min: 1024 },\r\n+    items: 3\r\n+  },\r\n+  tablet: {\r\n+    breakpoint: { max: 1024, min: 464 },\r\n+    items: 2\r\n+  },\r\n+  mobile: {\r\n+    breakpoint: { max: 464, min: 0 },\r\n+    items: 1\r\n+  }\r\n+};\r\n+<Carousel responsive={responsive}>\r\n+  <div>Item 1</div>\r\n+  <div>Item 2</div>\r\n+  <div>Item 3</div>\r\n+  <div>Item 4</div>\r\n+</Carousel>;\r\n+\r\n+type SliderProps = {\r\n+    \r\n+};\r\n+\r\n+const Slider:React.FC<SliderProps> = () => {\r\n+    \r\n+    return <div>Have a good coding</div>\r\n+}\r\n+export default Slider;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693913824615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,20 +19,22 @@\n     breakpoint: { max: 464, min: 0 },\r\n     items: 1\r\n   }\r\n };\r\n-<Carousel responsive={responsive}>\r\n-  <div>Item 1</div>\r\n-  <div>Item 2</div>\r\n-  <div>Item 3</div>\r\n-  <div>Item 4</div>\r\n-</Carousel>;\r\n \r\n+\r\n type SliderProps = {\r\n     \r\n };\r\n \r\n const Slider:React.FC<SliderProps> = () => {\r\n     \r\n-    return <div>Have a good coding</div>\r\n+    return <div>\r\n+        <Carousel responsive={responsive}>\r\n+  <div>Item 1</div>\r\n+  <div>Item 2</div>\r\n+  <div>Item 3</div>\r\n+  <div>Item 4</div>\r\n+</Carousel>;\r\n+    </div>\r\n }\r\n export default Slider;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693913903728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,12 +29,9 @@\n const Slider:React.FC<SliderProps> = () => {\r\n     \r\n     return <div>\r\n         <Carousel responsive={responsive}>\r\n-  <div>Item 1</div>\r\n-  <div>Item 2</div>\r\n-  <div>Item 3</div>\r\n-  <div>Item 4</div>\r\n+\r\n </Carousel>;\r\n     </div>\r\n }\r\n export default Slider;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693913910466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     \r\n };\r\n \r\n const Slider:React.FC<SliderProps> = () => {\r\n-    \r\n+    const list=[\"\"]\r\n     return <div>\r\n         <Carousel responsive={responsive}>\r\n \r\n </Carousel>;\r\n"
+                },
+                {
+                    "date": 1693913916966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     \r\n };\r\n \r\n const Slider:React.FC<SliderProps> = () => {\r\n-    const list=[\"\"]\r\n+    const list=[\"1\",\"2\"]\r\n     return <div>\r\n         <Carousel responsive={responsive}>\r\n \r\n </Carousel>;\r\n"
+                },
+                {
+                    "date": 1693913932879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     \r\n };\r\n \r\n const Slider:React.FC<SliderProps> = () => {\r\n-    const list=[\"1\",\"2\"]\r\n+    const listofNum=[\"1\",\"2\",\"3\",\"4\"]\r\n     return <div>\r\n         <Carousel responsive={responsive}>\r\n \r\n </Carousel>;\r\n"
+                },
+                {
+                    "date": 1693913941225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n const Slider:React.FC<SliderProps> = () => {\r\n     const listofNum=[\"1\",\"2\",\"3\",\"4\"]\r\n     return <div>\r\n         <Carousel responsive={responsive}>\r\n-{listofNum}\r\n+{listofNum.map}\r\n </Carousel>;\r\n     </div>\r\n }\r\n export default Slider;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693913955012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     return <div>\r\n         <Carousel responsive={responsive}>\r\n {listofNum.map((list,index)=>{\r\n     return(\r\n-        \r\n+        <d\r\n     )\r\n })}\r\n </Carousel>;\r\n     </div>\r\n"
+                }
+            ],
+            "date": 1693912823532,
+            "name": "Commit-0",
+            "content": "tfcd"
+        }
+    ]
+}

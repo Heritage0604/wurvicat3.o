@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/pages/admin/projects.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1694698391498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695044231274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import React from 'react'\r\n+import AdminNavbar from '@/components/AdminNavbar'\r\n+import ProjectsDashboard from '@/components/ProjectsDashboard'\r\n+const projects = () => {\r\n+  return (\r\n+    <div className='bg-slate-100 w-screen h-screen overflow-x-hidden'>\r\n+Hello world\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default projects\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695047984785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import React from 'react'\r\n+import AdminNavbar from '@/components/AdminNavbar'\r\n+import ProjectsDashboard from '@/components/ProjectsDashboard'\r\n+const projects = () => {\r\n+  return (\r\n+    <div className='bg-slate-100 w-screen h-screen overflow-x-hidden'>\r\n+<\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default projects\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695048010683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const projects = () => {\r\n   return (\r\n     <div className='bg-slate-100 w-screen h-screen overflow-x-hidden'>\r\n <AdminNavbar/>\r\n-<P\r\n+<Project\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1695048046426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\r\n import AdminNavbar from '@/components/AdminNavbar'\r\n-import ProjectsDashboard from '@/components/ProjectsDashboard'\r\n+import ProjectTable from '@/components/ProjectTable'\r\n const projects = () => {\r\n   return (\r\n     <div className='bg-slate-100 w-screen h-screen overflow-x-hidden'>\r\n <AdminNavbar/>\r\n"
+                }
+            ],
+            "date": 1694698391498,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst projects = () => {\r\n  return (\r\n    <div>projects</div>\r\n  )\r\n}\r\n\r\nexport default projects"
+        }
+    ]
+}

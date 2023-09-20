@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/pages/404.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1694009214645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694009224985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,9 @@\n-rafce\n\\ No newline at end of file\n+import React from 'react'\r\n+\r\n+const NotFound = () => {\r\n+  return (\r\n+    <div>404</div>\r\n+  )\r\n+}\r\n+\r\n+export default 404\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695203773918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import React from \"react\";\r\n+import { Flex, Button } from \"@chakra-ui/react\";\r\n+import Link from \"next/link\";\r\n+\r\n+const NotFound: React.FC = () => {\r\n+  return (\r\n+    <Flex\r\n+      direction=\"column\"\r\n+      justifyContent=\"center\"\r\n+      alignItems=\"center\"\r\n+      minHeight=\"60vh\"\r\n+    >\r\n+      Sorry, that page does not exist or has been banned\r\n+      \r\n+      <Link href=\"/\">\r\n+        <Button mt={4}>GO HOME</Button>\r\n+      </Link>\r\n+    </Flex>\r\n+  );\r\n+};\r\n+export default NotFound;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1694009214645,
+            "name": "Commit-0",
+            "content": "rafce"
+        }
+    ]
+}

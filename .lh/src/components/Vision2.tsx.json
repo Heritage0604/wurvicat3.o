@@ -1,0 +1,90 @@
+{
+    "sourceFile": "src/components/Vision2.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 18,
+            "patches": [
+                {
+                    "date": 1693992207439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1693992496141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,11 @@\n-rafce\n\\ No newline at end of file\n+import React from 'react'\r\n+\r\n+const Vision2 = () => {\r\n+  return (\r\n+    <Flex>\r\n+        \r\n+    </Flex>\r\n+  )\r\n+}\r\n+\r\n+export default Vision2\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693992550363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import { Flex } from '@chakra-ui/react'\r\n+import React from 'react'\r\n+\r\n+const Vision2 = () => {\r\n+  return (\r\n+    <Flex>\r\n+\r\n+    </Flex>\r\n+  )\r\n+}\r\n+\r\n+export default Vision2\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693992566976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,21 +3,12 @@\n \r\n const Vision2 = () => {\r\n   return (\r\n     <Flex>\r\n-\r\n+<Flex>\r\n+    \r\n+</Flex>\r\n     </Flex>\r\n   )\r\n }\r\n \r\n-export default Vision2\n-import React from 'react'\r\n-\r\n-const Vision2 = () => {\r\n-  return (\r\n-    <Flex>\r\n-        \r\n-    </Flex>\r\n-  )\r\n-}\r\n-\r\n export default Vision2\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693992575948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import { Flex } from '@chakra-ui/react'\r\n+import React from 'react'\r\n+\r\n+const Vision2 = () => {\r\n+  return (\r\n+    <Flex>\r\n+<Flex>Hello world</Flex>\r\n+    </Flex>\r\n+  )\r\n+}\r\n+\r\n+export default Vision2\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693992621691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,25 +2,13 @@\n import React from 'react'\r\n \r\n const Vision2 = () => {\r\n   return (\r\n-    <Flex>\r\n+    <Flex mt={\"\"}>\r\n <Flex>Hello world</Flex>\r\n+<Flex>Hello world</Flex>\r\n+<Flex>Hello world</Flex>\r\n     </Flex>\r\n   )\r\n }\r\n \r\n-export default Vision2\n-import { Flex } from '@chakra-ui/react'\r\n-import React from 'react'\r\n-\r\n-const Vision2 = () => {\r\n-  return (\r\n-    <Flex>\r\n-<Flex>\r\n-    \r\n-</Flex>\r\n-    </Flex>\r\n-  )\r\n-}\r\n-\r\n export default Vision2\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693992844539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,13 @@\n import { Flex } from '@chakra-ui/react'\r\n import React from 'react'\r\n+import dart from \"../../public/dart.jpg\"\r\n+import vision from \"../../public/vision.jpg\"\r\n+import value from \"../../public/value.jpg\"\r\n \r\n const Vision2 = () => {\r\n   return (\r\n-    <Flex mt={\"\"}>\r\n+    <Flex mt={\"5vh\"}>\r\n <Flex>Hello world</Flex>\r\n <Flex>Hello world</Flex>\r\n <Flex>Hello world</Flex>\r\n     </Flex>\r\n"
+                },
+                {
+                    "date": 1693992888354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,18 @@\n-import { Flex } from '@chakra-ui/react'\r\n+import { Flex,Text,Image } from '@chakra-ui/react'\r\n import React from 'react'\r\n import dart from \"../../public/dart.jpg\"\r\n import vision from \"../../public/vision.jpg\"\r\n import value from \"../../public/value.jpg\"\r\n \r\n const Vision2 = () => {\r\n   return (\r\n     <Flex mt={\"5vh\"}>\r\n+ <Flex position='relative'  className=' overflow-x-hidden '>\r\n+                    <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n+                </Flex>\r\n <Flex>Hello world</Flex>\r\n <Flex>Hello world</Flex>\r\n-<Flex>Hello world</Flex>\r\n     </Flex>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1693992897466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,14 @@\n     <Flex mt={\"5vh\"}>\r\n  <Flex position='relative'  className=' overflow-x-hidden '>\r\n                     <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n                 </Flex>\r\n+ <Flex position='relative'  className=' overflow-x-hidden '>\r\n+                    <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n+                </Flex>\r\n+ <Flex position='relative'  className=' overflow-x-hidden '>\r\n+                    <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n+                </Flex>\r\n <Flex>Hello world</Flex>\r\n <Flex>Hello world</Flex>\r\n     </Flex>\r\n   )\r\n"
+                },
+                {
+                    "date": 1693992920485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import value from \"../../public/value.jpg\"\r\n \r\n const Vision2 = () => {\r\n   return (\r\n-    <Flex mt={\"5vh\"}>\r\n+    <Flex mt={\"5vh\"} jus>\r\n  <Flex position='relative'  className=' overflow-x-hidden '>\r\n                     <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n                 </Flex>\r\n  <Flex position='relative'  className=' overflow-x-hidden '>\r\n@@ -15,10 +15,9 @@\n                 </Flex>\r\n  <Flex position='relative'  className=' overflow-x-hidden '>\r\n                     <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n                 </Flex>\r\n-<Flex>Hello world</Flex>\r\n-<Flex>Hello world</Flex>\r\n+\r\n     </Flex>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1693992929628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import value from \"../../public/value.jpg\"\r\n \r\n const Vision2 = () => {\r\n   return (\r\n-    <Flex mt={\"5vh\"} jus>\r\n+    <Flex mt={\"5vh\"} justify={'space'}>\r\n  <Flex position='relative'  className=' overflow-x-hidden '>\r\n                     <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n                 </Flex>\r\n  <Flex position='relative'  className=' overflow-x-hidden '>\r\n"
+                },
+                {
+                    "date": 1693992946194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import value from \"../../public/value.jpg\"\r\n \r\n const Vision2 = () => {\r\n   return (\r\n-    <Flex mt={\"5vh\"} justify={'space'}>\r\n+    <Flex mt={\"5vh\"} width={\"\"} justify={'space-around'}>\r\n  <Flex position='relative'  className=' overflow-x-hidden '>\r\n                     <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n                 </Flex>\r\n  <Flex position='relative'  className=' overflow-x-hidden '>\r\n"
+                },
+                {
+                    "date": 1693992970223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,19 +5,11 @@\n import value from \"../../public/value.jpg\"\r\n \r\n const Vision2 = () => {\r\n   return (\r\n-    <Flex mt={\"5vh\"} width={\"\"} justify={'space-around'}>\r\n- <Flex position='relative'  className=' overflow-x-hidden '>\r\n-                    <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n-                </Flex>\r\n- <Flex position='relative'  className=' overflow-x-hidden '>\r\n-                    <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n-                </Flex>\r\n- <Flex position='relative'  className=' overflow-x-hidden '>\r\n-                    <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n-                </Flex>\r\n+    <Flex mt={\"5vh\"} width={\"70%\"} justify={'space-around'}>\r\n \r\n+\r\n     </Flex>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1693992979915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,20 @@\n import value from \"../../public/value.jpg\"\r\n \r\n const Vision2 = () => {\r\n   return (\r\n-    <Flex mt={\"5vh\"} width={\"70%\"} justify={'space-around'}>\r\n+    <Flex mt={\"5vh\"} width={\"100%\"} justify={'space-around'}>\r\n+<Flex>\r\n+     <Flex position='relative'  className=' overflow-x-hidden '>\r\n+                    <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n+                </Flex>\r\n+ <Flex position='relative'  className=' overflow-x-hidden '>\r\n+                    <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n+                </Flex>\r\n+ <Flex position='relative'  className=' overflow-x-hidden '>\r\n+                    <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n+                </Flex>\r\n+</Flex>\r\n \r\n \r\n     </Flex>\r\n   )\r\n"
+                },
+                {
+                    "date": 1693992994255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n import value from \"../../public/value.jpg\"\r\n \r\n const Vision2 = () => {\r\n   return (\r\n-    <Flex mt={\"5vh\"} width={\"100%\"} justify={'space-around'}>\r\n-<Flex>\r\n+    <Flex mt={\"5vh\"} width={\"100%\"} >\r\n+<Flex justify={'space-around'}>\r\n      <Flex position='relative'  className=' overflow-x-hidden '>\r\n                     <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n                 </Flex>\r\n  <Flex position='relative'  className=' overflow-x-hidden '>\r\n"
+                },
+                {
+                    "date": 1693993010425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n import value from \"../../public/value.jpg\"\r\n \r\n const Vision2 = () => {\r\n   return (\r\n-    <Flex mt={\"5vh\"} width={\"100%\"} >\r\n-<Flex justify={'space-around'}>\r\n+    <Flex mt={\"5vh\"} width={\"100%\"} justify='center' >\r\n+<Flex justify={'space-around'} border={\"\"}>\r\n      <Flex position='relative'  className=' overflow-x-hidden '>\r\n                     <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n                 </Flex>\r\n  <Flex position='relative'  className=' overflow-x-hidden '>\r\n"
+                },
+                {
+                    "date": 1693993029080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n const Vision2 = () => {\r\n   return (\r\n     <Flex mt={\"5vh\"} width={\"100%\"} justify='center' >\r\n-<Flex justify={'space-around'} border={\"\"}>\r\n+<Flex justify={'space-around'} width= border={\"1px solid\"}>\r\n      <Flex position='relative'  className=' overflow-x-hidden '>\r\n                     <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n                 </Flex>\r\n  <Flex position='relative'  className=' overflow-x-hidden '>\r\n"
+                },
+                {
+                    "date": 1693993038394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n const Vision2 = () => {\r\n   return (\r\n     <Flex mt={\"5vh\"} width={\"100%\"} justify='center' >\r\n-<Flex justify={'space-around'} width={{base:\"100%\",}} border={\"1px solid\"}>\r\n+<Flex justify={'space-around'} width={{base:\"100%\",md:}} border={\"1px solid\"}>\r\n      <Flex position='relative'  className=' overflow-x-hidden '>\r\n                     <Image   className=' w-[300px] h-[300px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n                 </Flex>\r\n  <Flex position='relative'  className=' overflow-x-hidden '>\r\n"
+                },
+                {
+                    "date": 1693993287613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   return (\r\n     <Flex mt={\"7vh\"} width={\"100%\"} justify='center' >\r\n <Flex justify={'space-between'} width={{base:\"100%\",md:\"80%\"}} >\r\n      <Flex flexDir={\"column\"} boxShadow='2xl'  rounded='md' bg='white' position='relative'  className=' overflow-x-hidden '>\r\n-        <Text '>Our Vision</Text>\r\n+        <Text color='orange.500'>Our Vision</Text>\r\n                     <Image   className=' w-[300px] h-[100px]   overflow-x-hidden object-cover'    src={'/hero.avif'} alt=\"image\"/>\r\n \r\n                 </Flex>\r\n  <Flex position='relative'  className=' overflow-x-hidden '>\r\n"
+                }
+            ],
+            "date": 1693992207439,
+            "name": "Commit-0",
+            "content": "rafce"
+        }
+    ]
+}

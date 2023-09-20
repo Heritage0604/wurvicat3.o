@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/ReachOut.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1693930720176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1693930752066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n };\r\n \r\n const ReachOut:React.FC<ReachOutProps> = () => {\r\n     \r\n-    return\r\n+    return()\r\n }\r\n export default ReachOut;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693930766307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import { Flex } from '@chakra-ui/react';\r\n+import React from 'react';\r\n+\r\n+type ReachOutProps = {\r\n+    \r\n+};\r\n+\r\n+const ReachOut:React.FC<ReachOutProps> = () => {\r\n+    \r\n+    return(\r\n+        <Flex>\r\n+<Text>\r\n+    \r\n+</Text>\r\n+        </Flex>\r\n+    )\r\n+}\r\n+export default ReachOut;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1693930720176,
+            "name": "Commit-0",
+            "content": "tfcd"
+        }
+    ]
+}

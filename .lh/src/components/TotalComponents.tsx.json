@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/TotalComponents.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1694088250910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694088271055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n type TotalComponentsProps = {\r\n     icon:any,\r\n     text:string,\r\n-    \r\n+    amount:\r\n };\r\n \r\n const TotalComponents:React.FC<TotalComponentsProps> = () => {\r\n     \r\n"
+                },
+                {
+                    "date": 1694088283379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n type TotalComponentsProps = {\r\n     icon:any,\r\n     text:string,\r\n     amount:string,\r\n-    \r\n+    color:string\r\n };\r\n \r\n const TotalComponents:React.FC<TotalComponentsProps> = () => {\r\n     \r\n"
+                }
+            ],
+            "date": 1694088250910,
+            "name": "Commit-0",
+            "content": "tfcd"
+        }
+    ]
+}

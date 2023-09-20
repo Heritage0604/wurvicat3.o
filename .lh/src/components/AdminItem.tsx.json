@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/components/AdminItem.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1694080332139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694080343161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,11 @@\n-tfcd\n\\ No newline at end of file\n+import React from 'react';\r\n+\r\n+type AdminItemProps = {\r\n+    icon:any\r\n+};\r\n+\r\n+const AdminItem:React.FC<AdminItemProps> = () => {\r\n+    \r\n+    return <div>Have a good coding</div>\r\n+}\r\n+export default AdminItem;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694080348933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React from 'react';\r\n \r\n type AdminItemProps = {\r\n-    icon:any\r\n+    icon:any,\r\n+    \r\n };\r\n \r\n const AdminItem:React.FC<AdminItemProps> = () => {\r\n     \r\n"
+                },
+                {
+                    "date": 1694080357596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\r\n \r\n type AdminItemProps = {\r\n     icon:any,\r\n-    \r\n+    text:string\r\n };\r\n \r\n const AdminItem:React.FC<AdminItemProps> = () => {\r\n     \r\n"
+                },
+                {
+                    "date": 1694080366490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     icon:any,\r\n     text:string\r\n };\r\n \r\n-const AdminItem:React.FC<AdminItemProps> = ({icon,}) => {\r\n+const AdminItem:React.FC<AdminItemProps> = ({icon,text}) => {\r\n     \r\n     return <div>Have a good coding</div>\r\n }\r\n export default AdminItem;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694080436131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n \r\n const AdminItem:React.FC<AdminItemProps> = ({icon,text}) => {\r\n     \r\n     return (\r\n-         <Text p='2' mt={\"10px\"} width={\"100%\"} _hover={{bg:'gray.100',color:'black'}}  fontSize={{base:\"17px\",lg:'18px'}}  cursor='pointer' color='gray'> <Icon as={icon} mr='10px'/></Text>\r\n+         <Text p='2' mt={\"10px\"} width={\"100%\"} _hover={{bg:'gray.100',color:'black'}}  fontSize={{base:\"17px\",lg:'18px'}}  cursor='pointer' color='gray'> <Icon as={icon} mr='10px'/>{</Text>\r\n     )\r\n }\r\n export default AdminItem;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1694080332139,
+            "name": "Commit-0",
+            "content": "tfcd"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/pages/Contact.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1694008887830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694008897222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,11 @@\n-rafce\n\\ No newline at end of file\n+import React from 'react'\r\n+\r\n+const Contact = () => {\r\n+  return (\r\n+    <div>\r\n+        \r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default Contact\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694008957151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const Contact = () => {\r\n   return (\r\n     <div>\r\n-        \r\n+        <Abo\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1694008968294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n+import AboutHero from '@/components/AboutHero'\r\n import React from 'react'\r\n \r\n const Contact = () => {\r\n   return (\r\n     <div>\r\n-        <Abo\r\n+        <AboutHero/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1694009112127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import AboutHero from '@/components/AboutHero'\r\n+import React from 'react'\r\n+\r\n+const Contact = () => {\r\n+  return (\r\n+    <div>\r\n+        <AboutHero i/>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default Contact\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694009119014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,22 +3,10 @@\n \r\n const Contact = () => {\r\n   return (\r\n     <div>\r\n-        <AboutHero i/>\r\n+        <AboutHero imageurl='/con'/>\r\n     </div>\r\n   )\r\n }\r\n \r\n-export default Contact\n-import AboutHero from '@/components/AboutHero'\r\n-import React from 'react'\r\n-\r\n-const Contact = () => {\r\n-  return (\r\n-    <div>\r\n-        <AboutHero/>\r\n-    </div>\r\n-  )\r\n-}\r\n-\r\n export default Contact\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694009129618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const Contact = () => {\r\n   return (\r\n     <div>\r\n-        <AboutHero imageurl='/con'/>\r\n+        <AboutHero imageurl='/contact-us.png'/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1694009137606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const Contact = () => {\r\n   return (\r\n     <div>\r\n-        <AboutHero imageurl='/contact-us.png'/>\r\n+        <AboutHero imageurl='/contact-us.png' text=\"\"/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1694009570039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,13 @@\n import AboutHero from '@/components/AboutHero'\r\n+import Loaction from '@/components/Loaction'\r\n import React from 'react'\r\n \r\n const Contact = () => {\r\n   return (\r\n     <div>\r\n-        <AboutHero imageurl='/contact-us.png' text=\"\"/>\r\n+        <AboutHero imageurl='/contact-us.png' text=\"Contact Us\"/>\r\n+        <Loaction\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1694012639354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import AboutHero from '@/components/AboutHero'\r\n+import Footer from '@/components/Footer'\r\n+import Loaction from '@/components/Loaction'\r\n+import React from 'react'\r\n+\r\n+const Contact = () => {\r\n+  return (\r\n+    <div>\r\n+        <AboutHero imageurl='/contact-us.png' text=\"Contact Us\"/>\r\n+        <Loaction/>\r\n+        <Footer/>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default Contact\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1694008887830,
+            "name": "Commit-0",
+            "content": "rafce"
+        }
+    ]
+}

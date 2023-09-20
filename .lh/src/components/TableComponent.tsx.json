@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/components/TableComponent.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1694089169595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694089901674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,11 @@\n-tfcd\n\\ No newline at end of file\n+import React from 'react';\r\n+\r\n+type TableComponentProps = {\r\n+    \r\n+};\r\n+\r\n+const TableComponent:React.FC<TableComponentProps> = () => {\r\n+    \r\n+    return\r\n+}\r\n+export default TableComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694089923715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,13 @@\n };\r\n \r\n const TableComponent:React.FC<TableComponentProps> = () => {\r\n     \r\n-    return\r\n+    return(\r\n+        <>\r\n+        <Flex>\r\n+            \r\n+        </Flex>\r\n+        </>\r\n+    )\r\n }\r\n export default TableComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694090074274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,17 @@\n+import { Flex } from '@chakra-ui/react';\r\n import React from 'react';\r\n+import {\r\n+  Table,\r\n+  Thead,\r\n+  Tbody,\r\n+  Tfoot,\r\n+  Tr,\r\n+  Th,\r\n+  Td,\r\n+  TableCaption,\r\n+  TableContainer,\r\n+} from '@chakra-ui/react'\r\n \r\n type TableComponentProps = {\r\n     \r\n };\r\n@@ -8,9 +20,9 @@\n     \r\n     return(\r\n         <>\r\n         <Flex>\r\n-            \r\n+\r\n         </Flex>\r\n         </>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1694090089203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Flex } from '@chakra-ui/react';\r\n+import { Flex,Text } from '@chakra-ui/react';\r\n import React from 'react';\r\n import {\r\n   Table,\r\n   Thead,\r\n"
+                },
+                {
+                    "date": 1694090107494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     \r\n     return(\r\n         <>\r\n         <Flex>\r\n-\r\n+<Text>A</Text>\r\n         </Flex>\r\n         </>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1694090213332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n const TableComponent:React.FC<TableComponentProps> = () => {\r\n     \r\n     return(\r\n         <>\r\n-        <Flex>\r\n-<Text>A</Text>\r\n+        <Flex flexDir=''>\r\n+<Text>Active Orders</Text>\r\n         </Flex>\r\n         </>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1694090247893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n const TableComponent:React.FC<TableComponentProps> = () => {\r\n     \r\n     return(\r\n         <>\r\n-        <Flex flexDir=''>\r\n+        <Flex boxShadow='xl' p='3' rounded='md' bg='white' flexDir='column'>\r\n <Text>Active Orders</Text>\r\n         </Flex>\r\n         </>\r\n     )\r\n"
+                },
+                {
+                    "date": 1694090271454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,12 +18,12 @@\n \r\n const TableComponent:React.FC<TableComponentProps> = () => {\r\n     \r\n     return(\r\n-        <>\r\n+        <Flex>\r\n         <Flex boxShadow='xl' p='3' rounded='md' bg='white' flexDir='column'>\r\n <Text>Active Orders</Text>\r\n         </Flex>\r\n-        </>\r\n+        </Flex>\r\n     )\r\n }\r\n export default TableComponent;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694090277744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n const TableComponent:React.FC<TableComponentProps> = () => {\r\n     \r\n     return(\r\n         <Flex>\r\n-        <Flex boxShadow='xl' p='3' rounded='md' bg='white' flexDir='column'>\r\n+        <Flex width={} boxShadow='xl' p='3' rounded='md' bg='white' flexDir='column'>\r\n <Text>Active Orders</Text>\r\n         </Flex>\r\n         </Flex>\r\n     )\r\n"
+                },
+                {
+                    "date": 1694090290200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n const TableComponent:React.FC<TableComponentProps> = () => {\r\n     \r\n     return(\r\n         <Flex>\r\n-        <Flex width={{base:\"85%\",}} boxShadow='xl' p='3' rounded='md' bg='white' flexDir='column'>\r\n+        <Flex width={{base:\"85%\",lg:\"\"}} boxShadow='xl' p='3' rounded='md' bg='white' flexDir='column'>\r\n <Text>Active Orders</Text>\r\n         </Flex>\r\n         </Flex>\r\n     )\r\n"
+                },
+                {
+                    "date": 1694090320182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \r\n const TableComponent:React.FC<TableComponentProps> = () => {\r\n     \r\n     return(\r\n-        <Flex mt={\"\"} justify='center' width={\"100%\"}>\r\n+        <Flex mt={\"4vh\"} justify='center' width={\"100%\"}>\r\n         <Flex width={{base:\"85%\",lg:\"50%\"}} boxShadow='xl' p='3' rounded='md' bg='white' flexDir='column'>\r\n <Text>Active Orders</Text>\r\n         </Flex>\r\n         </Flex>\r\n"
+                }
+            ],
+            "date": 1694089169595,
+            "name": "Commit-0",
+            "content": "tfcd"
+        }
+    ]
+}

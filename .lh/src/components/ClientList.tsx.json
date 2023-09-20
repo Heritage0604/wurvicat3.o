@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/components/ClientList.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1694002050090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694002062941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,9 @@\n-rafce\n\\ No newline at end of file\n+import React from 'react'\r\n+\r\n+const ClientList = () => {\r\n+  return (\r\n+    <div>ClientList</div>\r\n+  )\r\n+}\r\n+\r\n+export default ClientList\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694003635160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n const ClientList = () => {\r\n   return (\r\n-    <div>ClientList</div>\r\n+    <Flex></Flex>\r\n   )\r\n }\r\n \r\n export default ClientList\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694003646342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,12 @@\n+import { Flex } from '@chakra-ui/react'\r\n import React from 'react'\r\n \r\n const ClientList = () => {\r\n   return (\r\n-    <Flex></Flex>\r\n+    <Flex>\r\n+\r\n+    </Flex>\r\n   )\r\n }\r\n \r\n export default ClientList\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694004102617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const ClientList = () => {\r\n   return (\r\n     <Flex>\r\n-\r\n+<Flex></Flex>\r\n     </Flex>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1694004111330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n \r\n const ClientList = () => {\r\n   return (\r\n     <Flex>\r\n-<Flex></Flex>\r\n+<Flex>\r\n+    <Image\r\n+</Flex>\r\n     </Flex>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1694004119704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const ClientList = () => {\r\n   return (\r\n     <Flex>\r\n <Flex>\r\n-    <Image src=\"\" alt=\"client\"\r\n+    <Image src=\"\" alt=\"client\"/>\r\n </Flex>\r\n     </Flex>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1694004127793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import { Flex } from '@chakra-ui/react'\r\n+import React from 'react'\r\n+\r\n+const ClientList = () => {\r\n+  return (\r\n+    <Flex>\r\n+<Flex>\r\n+    <Image src=\"\" alt=\"client\"/>\r\n+</Flex>\r\n+    </Flex>\r\n+  )\r\n+}\r\n+\r\n+export default ClientList\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1694002050090,
+            "name": "Commit-0",
+            "content": "rafce"
+        }
+    ]
+}

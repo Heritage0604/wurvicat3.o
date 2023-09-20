@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/pages/admin/profile.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1694160117515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694160226654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,9 @@\n };\r\n \r\n const profile:React.FC<profileProps> = () => {\r\n     \r\n-    return <div>Have a good coding</div>\r\n+    return <div>\r\n+        \r\n+    </div>\r\n }\r\n export default profile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694160276453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import React from 'react';\r\n+\r\n+type profileProps = {\r\n+    \r\n+};\r\n+\r\n+const profile:React.FC<profileProps> = () => {\r\n+    \r\n+    return <div>\r\n+        className='bg-slate-100 w-screen h-screen overflow-x-hidden'\r\n+    </div>\r\n+}\r\n+export default profile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694160304383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n \r\n const profile:React.FC<profileProps> = () => {\r\n     \r\n     return <div className='bg-slate-100 w-screen h-screen overflow-x-hidden'>\r\n-        \r\n+            <AdminNavbar/>\r\n     </div>\r\n }\r\n export default profile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694160544984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from 'react';\r\n import AdminNavbar from '@/components/AdminNavbar'\r\n+import ProfileDashboard from '@/components/ProfileDashboard';\r\n \r\n type profileProps = {\r\n     \r\n };\r\n"
+                }
+            ],
+            "date": 1694160117515,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\n\r\ntype profileProps = {\r\n    \r\n};\r\n\r\nconst profile:React.FC<profileProps> = () => {\r\n    \r\n    return <div>Have a good coding</div>\r\n}\r\nexport default profile;"
+        }
+    ]
+}

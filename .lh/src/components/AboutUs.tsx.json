@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/components/AboutUs.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1693990470103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1693990505441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,10 @@\n-rafce\n\\ No newline at end of file\n+import React from 'react'\r\n+import { Flex,Image,Text } from '@chakra-ui/react'\r\n+\r\n+const AboutUs = () => {\r\n+  return (\r\n+    <div>AboutUs</div>\r\n+  )\r\n+}\r\n+\r\n+export default AboutUs\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693990512137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,11 @@\n import { Flex,Image,Text } from '@chakra-ui/react'\r\n \r\n const AboutUs = () => {\r\n   return (\r\n-    <div>AboutUs</div>\r\n+    <Flex>\r\n+        \r\n+    </Flex>\r\n   )\r\n }\r\n \r\n export default AboutUs\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1693991223491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const AboutUs = () => {\r\n   return (\r\n     <Flex>\r\n-        \r\n+        Hello world\r\n     </Flex>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1693991270730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Flex,Image,Text } from '@chakra-ui/react'\r\n \r\n const AboutUs = () => {\r\n   return (\r\n-    <Flex>\r\n+    <Flex mt='7vh' bg={'orange.500'}>\r\n         Hello world\r\n     </Flex>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1693991291844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Flex,Image,Text } from '@chakra-ui/react'\r\n \r\n const AboutUs = () => {\r\n   return (\r\n-    <Flex mt='7vh' bg={'orange.500'}>\r\n+    <Flex mt='10vh' bg={'orange.500'}>\r\n         Hello world\r\n     </Flex>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1693991301017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n \r\n const AboutUs = () => {\r\n   return (\r\n     <Flex mt='10vh' bg={'orange.500'}>\r\n-        Hello world\r\n+        <Flex>\r\n+            Hello world\r\n+        </Flex>\r\n     </Flex>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1693991306728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Flex,Image,Text } from '@chakra-ui/react'\r\n \r\n const AboutUs = () => {\r\n   return (\r\n-    <Flex mt='10vh' bg={'orange.500'}>\r\n+    <Flex mt='10vh' >\r\n         <Flex>\r\n             Hello world\r\n         </Flex>\r\n     </Flex>\r\n"
+                },
+                {
+                    "date": 1693991314649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const AboutUs = () => {\r\n   return (\r\n     <Flex mt='10vh' >\r\n-        <Flex>\r\n+        <Flex bg={'orange.500'}>\r\n             Hello world\r\n         </Flex>\r\n     </Flex>\r\n   )\r\n"
+                },
+                {
+                    "date": 1693991330114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Flex,Image,Text } from '@chakra-ui/react'\r\n \r\n const AboutUs = () => {\r\n   return (\r\n-    <Flex mt='10vh' >\r\n+    <Flex mt='10vh' justify={\"cen\"} >\r\n         <Flex width={\"90%\"} bg={'orange.500'}>\r\n             Hello world\r\n         </Flex>\r\n     </Flex>\r\n"
+                },
+                {
+                    "date": 1693991346357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import React from 'react'\r\n+import { Flex,Image,Text } from '@chakra-ui/react'\r\n+\r\n+const AboutUs = () => {\r\n+  return (\r\n+    <Flex mt='10vh' width={\"100%\"} justify={\"cenetr\"} >\r\n+        <Flex width={\"90%\"} bg={'orange.500'}>\r\n+            Hello world\r\n+        </Flex>\r\n+    </Flex>\r\n+  )\r\n+}\r\n+\r\n+export default AboutUs\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1693990470103,
+            "name": "Commit-0",
+            "content": "rafce"
+        }
+    ]
+}

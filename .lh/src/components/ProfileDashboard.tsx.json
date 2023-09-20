@@ -1,0 +1,94 @@
+{
+    "sourceFile": "src/components/ProfileDashboard.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1694160424643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694160534817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,13 @@\n-tfcd\n\\ No newline at end of file\n+import React from 'react';\r\n+\r\n+type ProfileDashboardProps = {\r\n+    \r\n+};\r\n+\r\n+const ProfileDashboard:React.FC<ProfileDashboardProps> = () => {\r\n+    \r\n+    return <div>\r\n+        \r\n+    </div>\r\n+}\r\n+export default ProfileDashboard;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694160578621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n };\r\n \r\n const ProfileDashboard:React.FC<ProfileDashboardProps> = () => {\r\n     \r\n-    return <div>\r\n-        \r\n-    </div>\r\n+    return <Flex>\r\n+\r\n+    </Flex>\r\n }\r\n export default ProfileDashboard;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694160595705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { Flex,Text,Image } from '@chakra-ui/react';\r\n import React from 'react';\r\n \r\n type ProfileDashboardProps = {\r\n     \r\n"
+                },
+                {
+                    "date": 1694160605920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,10 @@\n \r\n const ProfileDashboard:React.FC<ProfileDashboardProps> = () => {\r\n     \r\n     return <Flex>\r\n-\r\n+<Flex>\r\n+    \r\n+</Flex>\r\n     </Flex>\r\n }\r\n export default ProfileDashboard;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694160615289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import { Flex,Text,Image } from '@chakra-ui/react';\r\n+import React from 'react';\r\n+\r\n+type ProfileDashboardProps = {\r\n+    \r\n+};\r\n+\r\n+const ProfileDashboard:React.FC<ProfileDashboardProps> = () => {\r\n+    \r\n+    return <Flex>\r\n+<Flex pos>\r\n+\r\n+</Flex>\r\n+    </Flex>\r\n+}\r\n+export default ProfileDashboard;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694160623014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,26 +7,10 @@\n \r\n const ProfileDashboard:React.FC<ProfileDashboardProps> = () => {\r\n     \r\n     return <Flex>\r\n-<Flex pos>\r\n+<Flex position={'relative'}>\r\n \r\n </Flex>\r\n     </Flex>\r\n }\r\n-export default ProfileDashboard;\n-import { Flex,Text,Image } from '@chakra-ui/react';\r\n-import React from 'react';\r\n-\r\n-type ProfileDashboardProps = {\r\n-    \r\n-};\r\n-\r\n-const ProfileDashboard:React.FC<ProfileDashboardProps> = () => {\r\n-    \r\n-    return <Flex>\r\n-<Flex>\r\n-    \r\n-</Flex>\r\n-    </Flex>\r\n-}\r\n export default ProfileDashboard;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694160679353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Flex,Text,Image } from '@chakra-ui/react';\r\n+import { Flex,Text,Image,Icon } from '@chakra-ui/react';\r\n import React from 'react';\r\n \r\n type ProfileDashboardProps = {\r\n     \r\n"
+                },
+                {
+                    "date": 1694160686002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { Flex,Text,Image,Icon } from '@chakra-ui/react';\r\n import React from 'react';\r\n+import {FaUserAlt}\r\n \r\n type ProfileDashboardProps = {\r\n     \r\n };\r\n"
+                },
+                {
+                    "date": 1694160691707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import { Flex,Text,Image,Icon } from '@chakra-ui/react';\r\n+import React from 'react';\r\n+import {FaUserAlt} from \"react-\"\r\n+\r\n+type ProfileDashboardProps = {\r\n+    \r\n+};\r\n+\r\n+const ProfileDashboard:React.FC<ProfileDashboardProps> = () => {\r\n+    \r\n+    return <Flex>\r\n+<Flex position={'relative'}>\r\n+\r\n+</Flex>\r\n+    </Flex>\r\n+}\r\n+export default ProfileDashboard;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694160715402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { Flex,Text,Image,Icon } from '@chakra-ui/react';\r\n import React from 'react';\r\n-import {FaUserAlt} from \"react-\"\r\n+import {FaUserAlt} from \"react-/fa\"\r\n \r\n type ProfileDashboardProps = {\r\n     \r\n };\r\n@@ -13,22 +13,5 @@\n \r\n </Flex>\r\n     </Flex>\r\n }\r\n-export default ProfileDashboard;\n-import { Flex,Text,Image,Icon } from '@chakra-ui/react';\r\n-import React from 'react';\r\n-import {FaUserAlt}\r\n-\r\n-type ProfileDashboardProps = {\r\n-    \r\n-};\r\n-\r\n-const ProfileDashboard:React.FC<ProfileDashboardProps> = () => {\r\n-    \r\n-    return <Flex>\r\n-<Flex position={'relative'}>\r\n-\r\n-</Flex>\r\n-    </Flex>\r\n-}\r\n export default ProfileDashboard;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1694160715528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { Flex,Text,Image,Icon } from '@chakra-ui/react';\r\n import React from 'react';\r\n-import {FaUserAlt} from \"react-/fa\"\r\n+import {FaUserAlt} from \"react-icons/fa\"\r\n \r\n type ProfileDashboardProps = {\r\n     \r\n };\r\n"
+                },
+                {
+                    "date": 1694160764984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n const ProfileDashboard:React.FC<ProfileDashboardProps> = () => {\r\n     \r\n     return <Flex>\r\n-<Flex position={'relative'}>\r\n+<Flex position={'relative'} boxShadow='dark-lg' p='6' rounded='md' bg='white'>\r\n \r\n </Flex>\r\n     </Flex>\r\n }\r\n"
+                },
+                {
+                    "date": 1694160808381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n const ProfileDashboard:React.FC<ProfileDashboardProps> = () => {\r\n     \r\n     return <Flex>\r\n-<Flex position={'relative'} boxShadow='dark-lg' p='6' rounded='md' bg='white'>\r\n+<Flex mt= position={'relative'} boxShadow='dark-lg' p='6' rounded='md' bg='white'>\r\n \r\n </Flex>\r\n     </Flex>\r\n }\r\n"
+                },
+                {
+                    "date": 1694160821712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n const ProfileDashboard:React.FC<ProfileDashboardProps> = () => {\r\n     \r\n     return <Flex>\r\n-<Flex mt= position={'relative'} boxShadow='dark-lg' p='6' rounded='md' bg='white'>\r\n+<Flex mt={\"10vh\"} position={'relative'} boxShadow='dark-lg' p='6' rounded='md' bg='white'>\r\n \r\n </Flex>\r\n     </Flex>\r\n }\r\n"
+                },
+                {
+                    "date": 1694160836042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n };\r\n \r\n const ProfileDashboard:React.FC<ProfileDashboardProps> = () => {\r\n     \r\n-    return <Flex>\r\n-<Flex mt={\"10vh\"} position={'relative'} boxShadow='dark-lg' p='6' rounded='md' bg='white'>\r\n+    return <Flex width={\"100%\"}>\r\n+<Flex mt={\"15vh\"} position={'relative'} boxShadow='dark-lg' p='6' rounded='md' bg='white'>\r\n \r\n </Flex>\r\n     </Flex>\r\n }\r\n"
+                },
+                {
+                    "date": 1694160842976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n };\r\n \r\n const ProfileDashboard:React.FC<ProfileDashboardProps> = () => {\r\n     \r\n-    return <Flex width={\"100%\"}>\r\n+    return <Flex border={\"1px solid\"} width={\"100%\"}>\r\n <Flex mt={\"15vh\"} position={'relative'} boxShadow='dark-lg' p='6' rounded='md' bg='white'>\r\n \r\n </Flex>\r\n     </Flex>\r\n"
+                },
+                {
+                    "date": 1694160853072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n const ProfileDashboard:React.FC<ProfileDashboardProps> = () => {\r\n     \r\n     return <Flex border={\"1px solid\"} width={\"100%\"}>\r\n-<Flex mt={\"15vh\"} position={'relative'} boxShadow='dark-lg' p='6' rounded='md' bg='white'>\r\n+<Flex mt={\"15vh\"} width={\"\"} position={'relative'} boxShadow='dark-lg' p='6' rounded='md' bg='white'>\r\n \r\n </Flex>\r\n     </Flex>\r\n }\r\n"
+                },
+                {
+                    "date": 1694160863216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n const ProfileDashboard:React.FC<ProfileDashboardProps> = () => {\r\n     \r\n     return <Flex border={\"1px solid\"} width={\"100%\"}>\r\n-<Flex mt={\"15vh\"} width={{base:\"85\"}} position={'relative'} boxShadow='dark-lg' p='6' rounded='md' bg='white'>\r\n+<Flex mt={\"15vh\"} width={{base:\"85%\"}} position={'relative'} boxShadow='dark-lg' p='6' rounded='md' bg='white'>\r\n \r\n </Flex>\r\n     </Flex>\r\n }\r\n"
+                },
+                {
+                    "date": 1694160891380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,5 @@\n \r\n </Flex>\r\n     </Flex>\r\n }\r\n-export default \n\\ No newline at end of file\n+export default ProfileDashboard;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1694160424643,
+            "name": "Commit-0",
+            "content": "tfcd"
+        }
+    ]
+}

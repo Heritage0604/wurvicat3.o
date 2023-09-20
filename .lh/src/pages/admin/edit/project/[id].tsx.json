@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/pages/admin/edit/project/[id].tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1695049479020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695049525311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,9 @@\n-rafce\n\\ No newline at end of file\n+import React from 'react'\r\n+\r\n+const EditProjects = () => {\r\n+  return (\r\n+    <div>EditProjects</div>\r\n+  )\r\n+}\r\n+\r\n+export default EditProjects\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695202876195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,43 @@\n     <div>EditProjects</div>\r\n   )\r\n }\r\n \r\n-export default EditProjects\n\\ No newline at end of file\n+export default EditProjects\r\n+\r\n+\r\n+export async function getServerSideProps(context:any) {\r\n+  \r\n+\r\n+try{\r\n+\r\n+if(typeof context.query.id===\"string\"){\r\n+      const productDocRef = doc(\r\n+        db,\r\n+      \"products\",\r\n+      context.query.id as string\r\n+    );\r\n+const productDoc = await getDoc(productDocRef );\r\n+\r\n+  return {\r\n+      props: {\r\n+        productData: productDoc.exists()\r\n+          ?\r\n+            JSON.parse(JSON.stringify({ id: productDoc.id, ...productDoc.data() }))  // needed for dates\r\n+            \r\n+          : \"\",\r\n+      },\r\n+    }\r\n+}\r\n+\r\n+}\r\n+catch(err:any){\r\n+    console.log(err.message)\r\n+    console.log(\"error\")\r\n+}\r\n+    \r\n+    return{\r\n+      props:{\r\n+        communityData:\"\"\r\n+      }\r\n+    }\r\n+  }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695202907257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from 'react'\r\n \r\n+\r\n const EditProjects = () => {\r\n   return (\r\n     <div>EditProjects</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1695203003207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from 'react'\r\n+import {auth,storage, db } from \"@/firebase/firebase\";\r\n+import { collection, addDoc,getDoc, updateDoc, doc, arrayUnion } from \"firebase/firestore\";\r\n \r\n-\r\n const EditProjects = () => {\r\n   return (\r\n     <div>EditProjects</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1695203045126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \r\n if(typeof context.query.id===\"string\"){\r\n       const productDocRef = doc(\r\n         db,\r\n-      \"products\",\r\n+      \"projects\",\r\n       context.query.id as string\r\n     );\r\n const productDoc = await getDoc(productDocRef );\r\n \r\n"
+                },
+                {
+                    "date": 1695203053912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n const productDoc = await getDoc(productDocRef );\r\n \r\n   return {\r\n       props: {\r\n-        productData: productDoc.exists()\r\n+        proctData: productDoc.exists()\r\n           ?\r\n             JSON.parse(JSON.stringify({ id: productDoc.id, ...productDoc.data() }))  // needed for dates\r\n             \r\n           : \"\",\r\n"
+                },
+                {
+                    "date": 1695203107502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,15 +21,15 @@\n         db,\r\n       \"projects\",\r\n       context.query.id as string\r\n     );\r\n-const productDoc = await getDoc(productDocRef );\r\n+const projectDoc = await getDoc(productDocRef );\r\n \r\n   return {\r\n       props: {\r\n-        proctData: productDoc.exists()\r\n+        projectData: projectDoc.exists()\r\n           ?\r\n-            JSON.parse(JSON.stringify({ id: productDoc.id, ...productDoc.data() }))  // needed for dates\r\n+            JSON.parse(JSON.stringify({ id: projectDoc.id, ...projectDoc.data() }))  // needed for dates\r\n             \r\n           : \"\",\r\n       },\r\n     }\r\n"
+                },
+                {
+                    "date": 1695203130168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,8 @@\n }\r\n     \r\n     return{\r\n       props:{\r\n-        communityData:\"\"\r\n+        projectData:\"\"\r\n       }\r\n     }\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695203542955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,51 @@\n+import React from 'react'\r\n+import {auth,storage, db } from \"@/firebase/firebase\";\r\n+import { collection, addDoc,getDoc, updateDoc, doc, arrayUnion } from \"firebase/firestore\";\r\n+\r\n+\r\n+\r\n+const EditProjects = () => {\r\n+  return (\r\n+    <div>EditProjects</div>\r\n+  )\r\n+}\r\n+\r\n+export default EditProjects\r\n+\r\n+\r\n+export async function getServerSideProps(context:any) {\r\n+  \r\n+\r\n+try{\r\n+\r\n+if(typeof context.query.id===\"string\"){\r\n+      const productDocRef = doc(\r\n+        db,\r\n+      \"projects\",\r\n+      context.query.id as string\r\n+    );\r\n+const projectDoc = await getDoc(productDocRef );\r\n+\r\n+  return {\r\n+      props: {\r\n+        projectData: projectDoc.exists()\r\n+          ?\r\n+            JSON.parse(JSON.stringify({ id: projectDoc.id, ...projectDoc.data() }))  // needed for dates\r\n+            \r\n+          : \"\",\r\n+      },\r\n+    }\r\n+}\r\n+\r\n+}\r\n+catch(err:any){\r\n+    console.log(err.message)\r\n+    console.log(\"error\")\r\n+}\r\n+    \r\n+    return{\r\n+      props:{\r\n+        projectData:\"\"\r\n+      }\r\n+    }\r\n+  }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695203609809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React from 'react'\r\n import {auth,storage, db } from \"@/firebase/firebase\";\r\n import { collection, addDoc,getDoc, updateDoc, doc, arrayUnion } from \"firebase/firestore\";\r\n \r\n+\r\n type Props = {\r\n     projectData:Projectt,\r\n    \r\n }\r\n"
+                },
+                {
+                    "date": 1695203610902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React from 'react'\r\n import {auth,storage, db } from \"@/firebase/firebase\";\r\n import { collection, addDoc,getDoc, updateDoc, doc, arrayUnion } from \"firebase/firestore\";\r\n \r\n+\r\n type Props = {\r\n     projectData:Projectt,\r\n    \r\n }\r\n"
+                }
+            ],
+            "date": 1695049479020,
+            "name": "Commit-0",
+            "content": "rafce"
+        }
+    ]
+}

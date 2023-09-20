@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/atoms/Project.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1695042743123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695042752075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   image:string;\r\n   id:number\r\n }\r\n \r\n-export interface Product{\r\n+export interface Project{\r\n     name:string\r\n     creatorId:string |null|undefined;\r\n     category:string\r\n     createdAt?:Timestamp;\r\n"
+                },
+                {
+                    "date": 1695042769486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n   image:string;\r\n   id:number\r\n }\r\n \r\n-export interface Project{\r\n-    name:string\r\n+export interface Projects{\r\n+    title:string;\r\n     creatorId:string |null|undefined;\r\n     category:string\r\n     createdAt?:Timestamp;\r\n     imageURL?:props[];\r\n"
+                },
+                {
+                    "date": 1695042789268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,8 @@\n \r\n export interface Projects{\r\n     title:string;\r\n     creatorId:string |null|undefined;\r\n-    category:string\r\n     createdAt?:Timestamp;\r\n     imageURL?:props[];\r\n     description:string;\r\n     productId?:string;\r\n"
+                },
+                {
+                    "date": 1695042804722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n \r\n \r\n \r\n \r\n-const defaultProductState:Product = {\r\n+const defaultProductState:Prod = {\r\n  name:\"\",\r\n  creatorId:\"\",\r\n  category:\"\",\r\n  description:\"\",\r\n"
+                },
+                {
+                    "date": 1695042833054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n \r\n \r\n \r\n \r\n-const defaultProductState:Projects = {\r\n+const defaultProState:Projects = {\r\n  name:\"\",\r\n  creatorId:\"\",\r\n  category:\"\",\r\n  description:\"\",\r\n"
+                },
+                {
+                    "date": 1695042842969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,6 +34,6 @@\n }\r\n \r\n export const projectState=atom<Projects>({\r\n     key:\"productState\",\r\n-    default:defaultProductState\r\n+    default:defaultProjtState\r\n })\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1695042743123,
+            "name": "Commit-0",
+            "content": "import { Timestamp } from \"firebase/firestore\";\r\nimport { atom } from \"recoil\";\r\n\r\n\r\nexport type props={\r\n  image:string;\r\n  id:number\r\n}\r\n\r\nexport interface Product{\r\n    name:string\r\n    creatorId:string |null|undefined;\r\n    category:string\r\n    createdAt?:Timestamp;\r\n    imageURL?:props[];\r\n    description:string;\r\n    productId?:string;\r\n    price:any;\r\n    id?:string\r\n\r\n}\r\n\r\n\r\n\r\n\r\nconst defaultProductState:Product = {\r\n name:\"\",\r\n creatorId:\"\",\r\n category:\"\",\r\n description:\"\",\r\n productId:\"\",\r\n price:\"\",\r\n imageURL:[],\r\n id:\"\"\r\n \r\n     \r\n}\r\n\r\nexport const productState=atom<Product>({\r\n    key:\"productState\",\r\n    default:defaultProductState\r\n})"
+        }
+    ]
+}
