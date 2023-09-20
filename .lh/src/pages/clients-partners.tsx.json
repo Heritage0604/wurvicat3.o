@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1693998937051,
@@ -52,6 +52,10 @@
                 {
                     "date": 1694008024126,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import AboutHero from '@/components/AboutHero';\r\n+import ClientList from '@/components/ClientList';\r\n import React from 'react';\r\n \r\n type clientsProps = {\r\n     \r\n@@ -8,8 +9,9 @@\n const clients:React.FC<clientsProps> = () => {\r\n     \r\n     return <div className='bg-slate-50'>\r\n         <AboutHero imageurl=\"/client.avif\" text=\"Clients & Partners\"/>\r\n-        <Clients\r\n+        <ClientList/>\r\n+        <Footer\r\n     </div>\r\n }\r\n export default clients;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695218816314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import AboutHero from '@/components/AboutHero';\r\n-import ClientList from '@/components/adminside/ClientList';\r\n+import ClientList from '@/components/ClientList';\r\n import Footer from '@/components/Footer';\r\n import React from 'react';\r\n \r\n type clientsProps = {\r\n"
                 }
             ],
             "date": 1693998937051,

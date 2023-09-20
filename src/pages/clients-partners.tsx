@@ -1,5 +1,5 @@
 import AboutHero from '@/components/AboutHero';
-import ClientList from '@/components/adminside/ClientList';
+import ClientList from '@/components/ClientList';
 import Footer from '@/components/Footer';
 import React from 'react';
 
