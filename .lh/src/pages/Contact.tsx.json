@@ -1,9 +1,9 @@
 {
-    "sourceFile": "src/pages/Contact.tsx",
+    "sourceFile": "src/pages/contact.tsx",
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 9,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1694008887830,
@@ -44,6 +44,10 @@
                 {
                     "date": 1694012639354,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import AboutHero from '@/components/AboutHero'\r\n+import Footer from '@/components/Footer'\r\n+import Loaction from '@/components/Loaction'\r\n+import React from 'react'\r\n+\r\n+const Contact = () => {\r\n+  return (\r\n+    <div>\r\n+        <AboutHero imageurl='/contact-us.png' text=\"Contact Us\"/>\r\n+        <Loaction/>\r\n+        <Footer/>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default Contact\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695218953101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,19 +12,5 @@\n     </div>\r\n   )\r\n }\r\n \r\n-export default Contact\n-import AboutHero from '@/components/AboutHero'\r\n-import Loaction from '@/components/Loaction'\r\n-import React from 'react'\r\n-\r\n-const Contact = () => {\r\n-  return (\r\n-    <div>\r\n-        <AboutHero imageurl='/contact-us.png' text=\"Contact Us\"/>\r\n-        <Loaction\r\n-    </div>\r\n-  )\r\n-}\r\n-\r\n export default Contact\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1694008887830,

@@ -1,6 +1,6 @@
 import AboutHero from '@/components/AboutHero'
 import Footer from '@/components/Footer'
-import Loaction from '@/components/clientside/Loaction'
+import Loaction from '@/components/Loaction'
 import React from 'react'
 
 const Contact = () => {
