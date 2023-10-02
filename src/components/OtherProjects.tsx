@@ -37,10 +37,10 @@ router.push(`/projects/${selectedProduct.id}`)
         <Flex p='6' bg='#e6e4df' justify='center' align='center' flexDir='column' width='100%' mt='5vh'>
             <Text fontSize='27px' fontWeight={600}>Related Projects</Text>
         <SimpleGrid   columns={{base:1,lg:3}} spacing={10} mt='5vh' className='max-w-5xl '    width='100%'    >
-        {products.map((project:any)=>{
+        {products.map((project:any,index:number)=>{
         
         return(
-            <Flex cursor={'pointer'} onClick={()=>nextPage(project)}   width='100%'  align='center'  flexDir='column'>
+            <Flex cursor={'pointer'} key={index} onClick={()=>nextPage(project)}   width='100%'  align='center'  flexDir='column'>
                 <Flex boxShadow='md' rounded={'md'} bg='white' p='3' flexDir='column' align='center' width={{base:'80%',lg:'100%'}}>
                 <Flex   width='100%'>
                     {project.imageURL.length>0 &&( <Image  mb={"2px"} height={"150px"} objectFit={'cover'} width={{base:'100%',lg:'100%'}} src={project.imageURL[0].image} alt={project.title}/>)}

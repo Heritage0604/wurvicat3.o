@@ -235,9 +235,9 @@ if(user){
     {category ? category :'Categories'}  <Icon fontWeight={600} as={BsChevronDown}/>
   </MenuButton>
   <MenuList>
-    {categories.map((cat:any)=>{
+    {categories.map((cat:any,index:number)=>{
       return(
-        <MenuItem onClick={()=>setCategory(cat.category)}>{cat.category} </MenuItem>
+        <MenuItem key={index} onClick={()=>setCategory(cat.category)}>{cat.category} </MenuItem>
       )
     })}
   
@@ -263,7 +263,7 @@ if(user){
         {file.map((img,index)=>{
          
             return(
-              <Stack key={img?.id} direction='row' position="relative">
+              <Stack key={index} direction='row' position="relative">
   <Image
 
   position="relative"
