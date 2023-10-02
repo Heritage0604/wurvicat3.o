@@ -6,7 +6,7 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import { useRouter } from 'next/router';
 import ProfileLoader from '@/components/ProfileLoader'
 
-const products = () => {
+const Products = () => {
   const [user, loading, error] = useAuthState(auth);
    	const router = useRouter();
 
@@ -29,5 +29,5 @@ const products = () => {
   )
 }
 
-export default products
+export default Products
 

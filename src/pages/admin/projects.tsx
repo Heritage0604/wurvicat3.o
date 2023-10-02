@@ -5,7 +5,7 @@ import { auth, db } from '@/firebase/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { useRouter } from 'next/router';
 import ProfileLoader from '@/components/ProfileLoader'
-const projects = () => {
+const Projects = () => {
   const [user, loading, error] = useAuthState(auth);
    	const router = useRouter();
 
@@ -28,4 +28,4 @@ const projects = () => {
   )
 }
 
-export default projects
+export default Projects

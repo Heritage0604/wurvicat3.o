@@ -29,8 +29,8 @@ router.push(`/projects/${selectedProduct.id}`)
         {projects.map((project:any)=>{
         
         return(
-<Link role='group' _hover={{}}>
-            <Flex _hover={{transform:'scale(1.1)',transition:'0.5s'}}  justify='space-between' width='100%'  cursor={'pointer'} key={project.id} onClick={()=>nextPage(project)}   borderRadius={'10px'} boxShadow={'md'} p='6' >
+<Link role='group' key={project.id} _hover={{}}>
+            <Flex _hover={{transform:'scale(1.1)',transition:'0.5s'}}  justify='space-between' width='100%'  cursor={'pointer'}  onClick={()=>nextPage(project)}   borderRadius={'10px'} boxShadow={'md'} p='6' >
                <Flex width={'50%'}  flexDir='column'>
                  <Text   fontSize='23px' fontWeight={700} >{project.title}</Text>
                  <Box _groupHover={{color:'orange.500'}} width={"90%"} fontSize='15px' color='gray'  overflow='hidden' dangerouslySetInnerHTML={{__html:`${project.description.slice(0,100)}...`}} />
