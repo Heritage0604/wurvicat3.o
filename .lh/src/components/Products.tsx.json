@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/components/Products.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1695374319755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695375570717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,11 @@\n-rafce\n\\ No newline at end of file\n+import React from 'react'\r\n+\r\n+const Products = () => {\r\n+  return (\r\n+   <Flex>\r\n+    \r\n+   </Flex>\r\n+  )\r\n+}\r\n+\r\n+export default Products\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695375582795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n+import { Flex,Image,Text,Simpl } from '@chakra-ui/react'\r\n import React from 'react'\r\n \r\n const Products = () => {\r\n   return (\r\n    <Flex>\r\n-    \r\n+\r\n    </Flex>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1695375589462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Flex,Image,Text,Simpl } from '@chakra-ui/react'\r\n+import { Flex,Image,Text,SimpleGrid,Grid,Link } from '@chakra-ui/react'\r\n import React from 'react'\r\n \r\n const Products = () => {\r\n   return (\r\n"
+                },
+                {
+                    "date": 1695375599782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\r\n \r\n const Products = () => {\r\n   return (\r\n-   <Flex>\r\n+   <Flex >\r\n \r\n    </Flex>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1695375640902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Flex,Image,Text,SimpleGrid,Grid,Link } from '@chakra-ui/react'\r\n+import { Flex,Image,Text,SimpleGrid,Grid,Link,Input } from '@chakra-ui/react'\r\n import React from 'react'\r\n \r\n const Products = () => {\r\n   return (\r\n"
+                },
+                {
+                    "date": 1695375660112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n \r\n const Products = () => {\r\n   return (\r\n    <Flex >\r\n-\r\n+<Flex>\r\n+    \r\n+</Flex>\r\n    </Flex>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1695375669348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const Products = () => {\r\n   return (\r\n    <Flex >\r\n <Flex>\r\n-    <Input placeholder=\"search Pro\"\r\n+    <Input placeholder=\"search Prod\"\r\n </Flex>\r\n    </Flex>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1695375682854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const Products = () => {\r\n   return (\r\n    <Flex >\r\n-<Flex>\r\n+<Flex> \r\n     <Input placeholder=\"search Products\"/>\r\n </Flex>\r\n    </Flex>\r\n   )\r\n"
+                }
+            ],
+            "date": 1695374319755,
+            "name": "Commit-0",
+            "content": "rafce"
+        }
+    ]
+}

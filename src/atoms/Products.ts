@@ -7,12 +7,12 @@ export type props={
   id:number
 }
 
-export interface Product{
+export type Product={
     name:string
     creatorId:string |null|undefined;
     category:string
     createdAt?:Timestamp;
-    imageURL?:props[];
+    imageURL:props[];
     description:string;
     productId?:string;
     price:any;

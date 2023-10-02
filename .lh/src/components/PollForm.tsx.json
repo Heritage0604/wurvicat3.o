@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/components/PollForm.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1695407799664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695408105084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React,{useState} from 'react'\r\n import { MdDelete} from \"react-icons/md\";\r\n \r\n type Props = {\r\n-    addOptions:string[]\r\n+    addOptions:any\r\n     DeleteInput:()=>void\r\n     AddInput:()=>{}\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1695408120543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,11 @@\n import React,{useState} from 'react'\r\n import { MdDelete} from \"react-icons/md\";\r\n \r\n type Props = {\r\n-    addOptions:any\r\n+    addOptions:string[]\r\n     DeleteInput:()=>void\r\n-    AddInput:()=>{}\r\n+    AddInput:any\r\n }\r\n \r\n \r\n const PollForm:React.FC<Props> = ({addOptions,DeleteInput,AddInput}) => {\r\n"
+                },
+                {
+                    "date": 1695408276325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n _focus={{outline:\"none\",bg:\"white\",border:\"1px solid black\"}}/>\r\n <Icon cursor=\"pointer\" onClick={DeleteInput} color=\"gray.500\" position=\"relative\" fontSize=\"16px\" left=\"-30px\" as ={ MdDelete}/>\r\n  </Flex>\r\n ))}\r\n-<Button onClick={AddInput} isDisabled={addOptions.length===4} width=\"30%\" color=\"blue.500\" fontWeight={700} variant={\"ghost\"}>Add Option</Button>\r\n+<Button onClick={AddInput}  width=\"30%\" color=\"blue.500\" fontWeight={700} variant={\"ghost\"}>Add Option</Button>\r\n </Stack>\r\n </Flex>\r\n </Stack>\r\n   )\r\n"
+                }
+            ],
+            "date": 1695407799660,
+            "name": "Commit-0",
+            "content": "import { Stack,Input,Textarea,Button,Flex,Icon } from '@chakra-ui/react'\r\nimport React,{useState} from 'react'\r\nimport { MdDelete} from \"react-icons/md\";\r\n\r\ntype Props = {\r\n    addOptions:string[]\r\n    DeleteInput:()=>void\r\n    AddInput:()=>{}\r\n}\r\n\r\n\r\nconst PollForm:React.FC<Props> = ({addOptions,DeleteInput,AddInput}) => {\r\n\r\n\r\n\r\n\r\n\r\n  return (\r\n   <Stack spacing={3} width=\"100%\">\r\n<Input\r\nname=\"title\" \r\n// value={ linkInputs.title} onChange={onChange}\r\nfontSize={\"10pt\"}\r\nborderRadius={4}\r\nplaceholder=\"Title\"\r\n_placeholder={{color:\"gray.500\"}}\r\n_focus={{outline:\"none\",bg:\"white\",border:\"1px solid black\"}}\r\n/>\r\n<Textarea\r\nname=\"body\" \r\n// value={ linkInputs.body}  onChange={onChange}\r\nfontSize={\"10pt\"}\r\nheight=\"100px\"\r\nborderRadius={4}\r\nplaceholder=\"Text(optional)\"\r\n_placeholder={{color:\"gray.500\"}}\r\n_focus={{outline:\"none\",bg:\"white\",border:\"1px solid black\"}}/>\r\n\r\n<Flex>\r\n    <Stack width=\"60%\" direction=\"column\" spacing={2}>\r\n    <Input\r\nname=\"title\" \r\n// value={textInputs.title} onChange={onChange}\r\nfontSize={\"10pt\"}\r\nborderRadius={4}\r\nplaceholder=\"Option 1\"\r\n_placeholder={{color:\"gray.500\"}}\r\n_focus={{outline:\"none\",bg:\"white\",border:\"1px solid black\"}}\r\n/>\r\n    <Input\r\nname=\"title\" \r\n// value={textInputs.title} onChange={onChange}\r\nfontSize={\"10pt\"}\r\nborderRadius={4}\r\nplaceholder=\"Option 2\"\r\n_placeholder={{color:\"gray.500\"}}\r\n_focus={{outline:\"none\",bg:\"white\",border:\"1px solid black\"}}\r\n/>\r\n{addOptions && addOptions.map((option,index)=>(\r\n<Flex key={index} align=\"center\" width=\"105%\">\r\n   <Input\r\nname=\"title\" \r\n// value={textInputs.title} onChange={onChange}\r\nfontSize={\"10pt\"}\r\nborderRadius={4}\r\n\r\nplaceholder={`Option ${index+3} `}\r\n_placeholder={{color:\"gray.500\"}}\r\n_focus={{outline:\"none\",bg:\"white\",border:\"1px solid black\"}}/>\r\n<Icon cursor=\"pointer\" onClick={DeleteInput} color=\"gray.500\" position=\"relative\" fontSize=\"16px\" left=\"-30px\" as ={ MdDelete}/>\r\n </Flex>\r\n))}\r\n<Button onClick={AddInput} isDisabled={addOptions.length===4} width=\"30%\" color=\"blue.500\" fontWeight={700} variant={\"ghost\"}>Add Option</Button>\r\n</Stack>\r\n</Flex>\r\n</Stack>\r\n  )\r\n}\r\n\r\nexport default PollForm"
+        }
+    ]
+}

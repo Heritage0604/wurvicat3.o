@@ -1,18 +1,40 @@
 import { adminUserState } from '@/atoms/AdminUser'
 import { Product, props } from '@/atoms/Products'
 import { auth,db, storage } from '@/firebase/firebase'
-import { Flex,Text,Image,Input,Textarea,Button,Stack,Icon } from '@chakra-ui/react'
+import { Flex,Text,Image,Input,Textarea,Button,Stack,Icon ,useDisclosure} from '@chakra-ui/react'
 import React,{useEffect,useState,useRef} from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import{MdOutlineCancel}from "react-icons/md"
 import { useRecoilState } from 'recoil'
-import { getDoc,doc ,updateDoc, arrayUnion} from 'firebase/firestore';
+import { getDoc,doc ,updateDoc, arrayUnion, getDocs} from 'firebase/firestore';
 import { collection, addDoc,Timestamp } from "firebase/firestore";
 import {toast} from "react-toastify" 
 import { useRouter } from 'next/router'
 import 'react-quill/dist/quill.snow.css';
 import dynamic from "next/dynamic";
 import { getDownloadURL, ref, uploadString } from 'firebase/storage'
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from '@chakra-ui/react'
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+} from '@chakra-ui/react'
+import {BsChevronDown} from "react-icons/bs"
+import {AiOutlinePlus} from "react-icons/ai"
+
 
 const ReactQuill = dynamic(import('react-quill'), { ssr: false })
 
@@ -43,6 +65,8 @@ const AddProducts = () => {
 
     const[name,setName]=useState("")
     const [value, setValue] = useState('');
+      const { isOpen, onOpen, onClose } = useDisclosure()
+      
     const quillRef = useRef<any>(null);
     const[description,setDescription]=useState("")
     const[price,setPrice]=useState("")
@@ -54,6 +78,7 @@ const AddProducts = () => {
     const[userValue,setUserValue]=useRecoilState(adminUserState)
     const[editor,setEditor]=useState("")
     const router=useRouter()
+    const [categories,setCategories]=useState<any>([])
     
 const sanitizedHTML = description.trim().replace(/<p><br><\/p>/g, '')
    const onSelectImage = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -79,10 +104,29 @@ setFile((prevImage)=>prevImage.filter((item)=>item.id != id))
 const handleSubmit= async()=>{
     ;
       
-        if (regex.test(name) ||  regex.test(price) ||  regex.test(category) ||  sanitizedHTML == ''  ){
+        if (regex.test(name) ||  regex.test(price)   ||  sanitizedHTML == ''   ){
       // Empty string
        setError('Input values can not be  empty');
      alert("Input values can not be  empty")
+    setTimeout(()=>{
+setError("")
+    },8000)
+     return
+    }
+
+    if(file.length <= 0){
+         setError('Input values can not be  empty');
+     alert("Please select at least 1 image")
+    setTimeout(()=>{
+setError("")
+    },8000)
+     return
+    }
+
+
+    if( regex.test(category)){
+               setError('Input values can not be  empty');
+     alert("Please select a category")
     setTimeout(()=>{
 setError("")
     },8000)
@@ -97,6 +141,7 @@ const productData:Product={
     price,
     createdAt:Timestamp.fromDate(new Date()),
     creatorId:user?.email,
+    imageURL:[]
    
 }
 const docRef = await addDoc(collection(db, "products"),productData);
@@ -138,9 +183,22 @@ setUserValue(userData)
 }
     }
     
+
+     const getCategories=async()=>{
+const querySnapshot = await getDocs(collection(db, "categories"));
+   const comments = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));;
+      setCategories(comments)
+    
+
+}
+
 useEffect(()=>{
 if(user){
  getUser(user.email)
+ getCategories()
 }
 
 },[user])
@@ -169,9 +227,20 @@ if(user){
 <Input type="number" inputMode="numeric" value={price} onChange={(e)=>setPrice(e.target.value)}  placeholder='Product Price'/>
 </Flex>
 
-<Flex mt='20px' flexDir='column'>
-        <Text ml={"1px"} mb={"5px"}>Category</Text>
-<Input  value={category} onChange={(e)=>setCategory(e.target.value)} placeholder='Product Category'/>
+<Flex mt='20px'  >
+  <Menu>
+  <MenuButton as={Button}>
+    {category ? category :'Categories'}  <Icon fontWeight={600} as={BsChevronDown}/>
+  </MenuButton>
+  <MenuList>
+    {categories.map((cat:any)=>{
+      return(
+        <MenuItem onClick={()=>setCategory(cat.category)}>{cat.category} </MenuItem>
+      )
+    })}
+  
+  </MenuList>
+</Menu>
 </Flex>
 
 
@@ -234,6 +303,29 @@ if(user){
 </Flex>
 
    </Flex>
+
+
+   <Modal
+        onClose={onClose}
+        // finalFocusRef={btnRef}
+        isOpen={isOpen}
+        scrollBehavior={'inside'}
+        size='md'
+      >
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Product Categories</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Input placeholder='Add Categories'/>
+            
+          </ModalBody>
+          <ModalFooter>
+            <Button variant={'outline'} colorScheme='red' onClick={onClose}>Close</Button>
+            <Button colorScheme='blue' ml='10px' onClick={onClose}>Add to Categories</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
    </Flex>
   )
 }

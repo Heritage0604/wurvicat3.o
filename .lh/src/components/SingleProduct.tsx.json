@@ -1,0 +1,70 @@
+{
+    "sourceFile": "src/components/SingleProduct.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1695397962859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695398057796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+import React from 'react';\r\n+\r\n+type SingleProductProps = {\r\n+    productData\r\n+};\r\n+\r\n+const SingleProduct:React.FC<SingleProductProps> = () => {\r\n+    \r\n+    return <div>Have a good coding</div>\r\n+}\r\n+export default SingleProduct;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695398068956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,11 @@\n import React from 'react';\r\n \r\n type SingleProductProps = {\r\n-    productData\r\n+    productData:Product\r\n };\r\n \r\n-const SingleProduct:React.FC<SingleProductProps> = () => {\r\n+const SingleProduct:React.FC<SingleProductProps> = ({productData}) => {\r\n     \r\n     return <div>Have a good coding</div>\r\n }\r\n\\ No newline at end of file\n-export default SingleProduct;\n-tfcd\n+export default SingleProduct;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695398078388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { Product } from '@/atoms/Products';\r\n import React from 'react';\r\n \r\n type SingleProductProps = {\r\n     productData:Product\r\n"
+                },
+                {
+                    "date": 1695398087137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import { Product } from '@/atoms/Products';\r\n+import React from 'react';\r\n+\r\n+type SingleProductProps = {\r\n+    productData:Product\r\n+};\r\n+\r\n+const SingleProduct:React.FC<SingleProductProps> = ({productData}) => {\r\n+    \r\n+    return(\r\n+         <Flex justify='center' width={\"100%\"} >\r\n+                <Flex width={\"90%\"} borderRadius='10px' p='6' mt={\"10vh\"} bg='white' boxShadow=\"md\">\r\n+                 <Flex>\r\n+                    {/* <Image src={productItem.imageURL[0].image} alt='image'/> */}\r\n+                    <Text>{productItem.name}</Text>\r\n+                 </Flex>\r\n+                </Flex>\r\n+            </Flex>\r\n+    )\r\n+}\r\n+export default SingleProduct;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695398094085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,23 +11,11 @@\n          <Flex justify='center' width={\"100%\"} >\r\n                 <Flex width={\"90%\"} borderRadius='10px' p='6' mt={\"10vh\"} bg='white' boxShadow=\"md\">\r\n                  <Flex>\r\n                     {/* <Image src={productItem.imageURL[0].image} alt='image'/> */}\r\n-                    <Text>{productItem.name}</Text>\r\n+                    <Text>{productData.name}</Text>\r\n                  </Flex>\r\n                 </Flex>\r\n             </Flex>\r\n     )\r\n }\r\n-export default SingleProduct;\n-import { Product } from '@/atoms/Products';\r\n-import React from 'react';\r\n-\r\n-type SingleProductProps = {\r\n-    productData:Product\r\n-};\r\n-\r\n-const SingleProduct:React.FC<SingleProductProps> = ({productData}) => {\r\n-    \r\n-    return <div>Have a good coding</div>\r\n-}\r\n export default SingleProduct;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695398101852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import { Product } from '@/atoms/Products';\r\n+import { Flex } from '@chakra-ui/react';\r\n+import React from 'react';\r\n+\r\n+type SingleProductProps = {\r\n+    productData:Product\r\n+};\r\n+\r\n+const SingleProduct:React.FC<SingleProductProps> = ({productData}) => {\r\n+    \r\n+    return(\r\n+         <Flex justify='center' width={\"100%\"} >\r\n+                <Flex width={\"90%\"} borderRadius='10px' p='6' mt={\"10vh\"} bg='white' boxShadow=\"md\">\r\n+                 <Flex>\r\n+                    {/* <Image src={productItem.imageURL[0].image} alt='image'/> */}\r\n+                    <Text>{productData.name}</Text>\r\n+                 </Flex>\r\n+                </Flex>\r\n+            </Flex>\r\n+    )\r\n+}\r\n+export default SingleProduct;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695398114128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Product } from '@/atoms/Products';\r\n-import { Flex } from '@chakra-ui/react';\r\n+import { Flex, Text } from '@chakra-ui/react';\r\n import React from 'react';\r\n \r\n type SingleProductProps = {\r\n     productData:Product\r\n@@ -18,26 +18,5 @@\n                 </Flex>\r\n             </Flex>\r\n     )\r\n }\r\n-export default SingleProduct;\n-import { Product } from '@/atoms/Products';\r\n-import React from 'react';\r\n-\r\n-type SingleProductProps = {\r\n-    productData:Product\r\n-};\r\n-\r\n-const SingleProduct:React.FC<SingleProductProps> = ({productData}) => {\r\n-    \r\n-    return(\r\n-         <Flex justify='center' width={\"100%\"} >\r\n-                <Flex width={\"90%\"} borderRadius='10px' p='6' mt={\"10vh\"} bg='white' boxShadow=\"md\">\r\n-                 <Flex>\r\n-                    {/* <Image src={productItem.imageURL[0].image} alt='image'/> */}\r\n-                    <Text>{productData.name}</Text>\r\n-                 </Flex>\r\n-                </Flex>\r\n-            </Flex>\r\n-    )\r\n-}\r\n export default SingleProduct;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695398126996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     return(\r\n          <Flex justify='center' width={\"100%\"} >\r\n                 <Flex width={\"90%\"} borderRadius='10px' p='6' mt={\"10vh\"} bg='white' boxShadow=\"md\">\r\n                  <Flex>\r\n-                    {/* <Image src={productItem.imageURL[0].image} alt='image'/> */}\r\n+                    <Image src={productItem.imageURL[0].image} alt='image'/>\r\n                     <Text>{productData.name}</Text>\r\n                  </Flex>\r\n                 </Flex>\r\n             </Flex>\r\n"
+                },
+                {
+                    "date": 1695398135296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import { Product } from '@/atoms/Products';\r\n+import { Flex, Text } from '@chakra-ui/react';\r\n+import React from 'react';\r\n+\r\n+type SingleProductProps = {\r\n+    productData:Product\r\n+};\r\n+\r\n+const SingleProduct:React.FC<SingleProductProps> = ({productData}) => {\r\n+    \r\n+    return(\r\n+         <Flex justify='center' width={\"100%\"} >\r\n+                <Flex width={\"90%\"} borderRadius='10px' p='6' mt={\"10vh\"} bg='white' boxShadow=\"md\">\r\n+                 <Flex>\r\n+                    <Image src={productData.imageURL[0].image} alt='image'/>\r\n+                    <Text>{productData.name}</Text>\r\n+                 </Flex>\r\n+                </Flex>\r\n+            </Flex>\r\n+    )\r\n+}\r\n+export default SingleProduct;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695398144002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Product } from '@/atoms/Products';\r\n-import { Flex, Text } from '@chakra-ui/react';\r\n+import { Flex, Text,Image } from '@chakra-ui/react';\r\n import React from 'react';\r\n \r\n type SingleProductProps = {\r\n     productData:Product\r\n@@ -18,27 +18,5 @@\n                 </Flex>\r\n             </Flex>\r\n     )\r\n }\r\n-export default SingleProduct;\n-import { Product } from '@/atoms/Products';\r\n-import { Flex, Text } from '@chakra-ui/react';\r\n-import React from 'react';\r\n-\r\n-type SingleProductProps = {\r\n-    productData:Product\r\n-};\r\n-\r\n-const SingleProduct:React.FC<SingleProductProps> = ({productData}) => {\r\n-    \r\n-    return(\r\n-         <Flex justify='center' width={\"100%\"} >\r\n-                <Flex width={\"90%\"} borderRadius='10px' p='6' mt={\"10vh\"} bg='white' boxShadow=\"md\">\r\n-                 <Flex>\r\n-                    <Image src={productItem.imageURL[0].image} alt='image'/>\r\n-                    <Text>{productData.name}</Text>\r\n-                 </Flex>\r\n-                </Flex>\r\n-            </Flex>\r\n-    )\r\n-}\r\n export default SingleProduct;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695398164419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     return(\r\n          <Flex justify='center' width={\"100%\"} >\r\n                 <Flex width={\"90%\"} borderRadius='10px' p='6' mt={\"10vh\"} bg='white' boxShadow=\"md\">\r\n                  <Flex>\r\n-                    <Image src={productData.imageURL[0].image} alt='image'/>\r\n+                    <Image width={''} src={productData.imageURL[0].image} alt='image'/>\r\n                     <Text>{productData.name}</Text>\r\n                  </Flex>\r\n                 </Flex>\r\n             </Flex>\r\n"
+                },
+                {
+                    "date": 1695398190500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     return(\r\n          <Flex justify='center' width={\"100%\"} >\r\n                 <Flex width={\"90%\"} borderRadius='10px' p='6' mt={\"10vh\"} bg='white' boxShadow=\"md\">\r\n                  <Flex>\r\n-                    <Image width={'300px'} src={productData.imageURL[0].image} alt='image'/>\r\n+                    <Image width={{}} src={productData.imageURL[0].image} alt='image'/>\r\n                     <Text>{productData.name}</Text>\r\n                  </Flex>\r\n                 </Flex>\r\n             </Flex>\r\n"
+                },
+                {
+                    "date": 1695398205639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     return(\r\n          <Flex justify='center' width={\"100%\"} >\r\n                 <Flex width={\"90%\"} borderRadius='10px' p='6' mt={\"10vh\"} bg='white' boxShadow=\"md\">\r\n                  <Flex>\r\n-                    <Image width={{base:\"100%\"}} src={productData.imageURL[0].image} alt='image'/>\r\n+                    <Image width={{base:\"100%\",lg:\"\"}} src={productData.imageURL[0].image} alt='image'/>\r\n                     <Text>{productData.name}</Text>\r\n                  </Flex>\r\n                 </Flex>\r\n             </Flex>\r\n"
+                }
+            ],
+            "date": 1695397962859,
+            "name": "Commit-0",
+            "content": "tfcd"
+        }
+    ]
+}

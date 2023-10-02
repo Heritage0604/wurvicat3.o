@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/pages/products/[id].tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1695395292949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695395293192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+tfcd\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695395302845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+import React from 'react';\r\n+\r\n+type [id]Props = {\r\n+    \r\n+};\r\n+\r\n+const :React.FC<[id]Props> = () => {\r\n+    \r\n+    return <div>Have a good coding</div>\r\n+}\r\n+export default [id];\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695395309051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,9 @@\n type [id]Props = {\r\n     \r\n };\r\n \r\n-const :React.FC<[id]Props> = () => {\r\n+const ProductPA:React.FC<[id]Props> = () => {\r\n     \r\n     return <div>Have a good coding</div>\r\n }\r\n-export default [id];\n-tfcd\n\\ No newline at end of file\n-tfcd\n+export default [id];\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695395318126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,5 @@\n const ProductPage:React.FC<[id]Props> = () => {\r\n     \r\n     return <div>Have a good coding</div>\r\n }\r\n-export default [id];\n\\ No newline at end of file\n+export default ProductPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695395645104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import React from 'react';\r\n+\r\n+type Props = {\r\n+    \r\n+};\r\n+\r\n+const ProductPage:React.FC<Props> = () => {\r\n+\r\n+    \r\n+    \r\n+    return <div>Have a good coding</div>\r\n+}\r\n+export default ProductPage;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1695395292949,
+            "name": "Commit-0",
+            "content": "tfcd"
+        }
+    ]
+}

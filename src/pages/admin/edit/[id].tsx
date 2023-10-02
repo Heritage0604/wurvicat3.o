@@ -1,9 +1,14 @@
 import { Product } from "@/atoms/Products";
-import {auth,storage, db } from "@/firebase/firebase";
+import { auth, db } from '@/firebase/firebase';
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { useRouter } from 'next/router';
 import AdminNavbar from '@/components/AdminNavbar'
 import EditProduct from '@/components/EditProduct'
 import { collection, addDoc,getDoc, updateDoc, doc, arrayUnion } from "firebase/firestore"; 
 import NotFound from "@/pages/404";
+import ProfileLoader from '@/components/ProfileLoader'
+import React,{useEffect} from 'react'
+
 
 // pages/[slug].js
 type Props = {
@@ -12,6 +17,18 @@ type Props = {
 }
 const DynamicPage:React.FC<Props> = ({ productData }) => {
     
+  const [user, loading, error] = useAuthState(auth);
+   	const router = useRouter();
+
+      useEffect(() => {
+		if (loading && !user) {
+			return
+		};
+    if(loading==false && !user){
+      router.push("/")
+    }
+		
+	}, [user, router, loading]);
 
     if(!productData ){
 
@@ -25,8 +42,8 @@ const DynamicPage:React.FC<Props> = ({ productData }) => {
   return (
     
     <div className='bg-slate-100 w-screen h-screen overflow-x-hidden'>
-    <AdminNavbar/>
-    <EditProduct productData={productData}/>
+    {user ?<><AdminNavbar/>
+    <EditProduct productData={productData}/></>:<ProfileLoader/>}
     </div>
   );
 };

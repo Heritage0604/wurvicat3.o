@@ -34,7 +34,7 @@ setactive(router.pathname)
                 <Link as={NextLink} prefetch={true} href="/" color={active=='/' ? "orange.500" :"black"} _hover={{color:"orange.500",transition: '0.4s'}} >HOME</Link>
                 <Link  as={NextLink} prefetch={true} href="/about" color={active=='/about' ? "orange.500" :"black"} _hover={{color:"orange.500",transition: '0.4s'}}>ABOUT US</Link>
                 <Link  as={NextLink} prefetch={true} href="/clients-partners" color={active=='/clients-partners'? "orange.500" :"black"} _hover={{color:"orange.500",transition: '0.4s'}}>CLIENTS & PARTNERS</Link>
-                <Link  as={NextLink} prefetch={true} href="/services" color={active=='/services' ? "orange.500" :"black"} _hover={{color:"orange.500",transition: '0.4s'}}>SERVICES</Link>
+                <Link  as={NextLink} prefetch={true} href="/products" color={active=='/products' ? "orange.500" :"black"} _hover={{color:"orange.500",transition: '0.4s'}}>PRODUCTS</Link>
                 <Link  as={NextLink} prefetch={true} href="/projects" color={active=='/projects' ? "orange.500" :"black"} _hover={{color:"orange.500",transition: '0.4s'}}>OUR PROJECTS</Link>
                 <Link  as={NextLink} prefetch={true} href="/contact" color={active=='/contact' ? "orange.500" :"black"} _hover={{color:"orange.500",transition: '0.4s'}}>CONTACT</Link>
               
@@ -66,7 +66,7 @@ setactive(router.pathname)
   <Link  as={NextLink} prefetch={true}  pl={"10px"} pb={"4px"} href="/about" color={active=='/about' ? "orange.500" :"black"} _hover={{color:"orange.500",transition: '0.4s'}}>ABOUT US</Link>
   
   <Link  as={NextLink} prefetch={true} pl={"10px"} pb={"4px"} href="/clients-partners" color={active=='/clients-partners'? "orange.500" :"black"} _hover={{color:"orange.500",transition: '0.4s'}}>CLIENTS & PARTNERS</Link>
-      <Link  as={NextLink} prefetch={true} pl={"10px"} pb={"4px"} href="/services" color={active=='/services' ? "orange.500" :"black"} _hover={{color:"orange.500",transition: '0.4s'}}>SERVICES</Link>
+      <Link  as={NextLink} prefetch={true} pl={"10px"} pb={"4px"} href="/products" color={active=='/products' ? "orange.500" :"black"} _hover={{color:"orange.500",transition: '0.4s'}}>PRODUCTS</Link>
   <Link  as={NextLink} prefetch={true} pl={"10px"} pb={"4px"} href="/projects" color={active=='/projects' ? "orange.500" :"black"} _hover={{color:"orange.500",transition: '0.4s'}}>OUR PROJECTS</Link>
   <Link  as={NextLink} prefetch={true} pl={"10px"} pb={"4px"} href="/contact" color={active=='/contact' ? "orange.500" :"black"} _hover={{color:"orange.500",transition: '0.4s'}}>CONTACT</Link>
   

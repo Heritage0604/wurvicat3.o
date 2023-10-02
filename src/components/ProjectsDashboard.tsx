@@ -118,6 +118,15 @@ setError("")
      return
     }
 
+        if(file.length <= 0){
+         setError('Input values can not be  empty');
+     alert("Please select at least 1 image")
+    setTimeout(()=>{
+setError("")
+    },8000)
+     return
+    }
+
     try{
 const projectData:any={
     title,

@@ -3,11 +3,23 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1694612496986,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695384728810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,42 @@\n+import { Timestamp } from \"firebase/firestore\";\r\n+import { atom } from \"recoil\";\r\n+\r\n+\r\n+export type props={\r\n+  image:string;\r\n+  id:number\r\n+}\r\n+\r\n+export type= Product{\r\n+    name:string\r\n+    creatorId:string |null|undefined;\r\n+    category:string\r\n+    createdAt?:Timestamp;\r\n+    imageURL?:props[];\r\n+    description:string;\r\n+    productId?:string;\r\n+    price:any;\r\n+    id?:string\r\n+\r\n+}\r\n+\r\n+\r\n+\r\n+\r\n+const defaultProductState:Product = {\r\n+ name:\"\",\r\n+ creatorId:\"\",\r\n+ category:\"\",\r\n+ description:\"\",\r\n+ productId:\"\",\r\n+ price:\"\",\r\n+ imageURL:[],\r\n+ id:\"\"\r\n+ \r\n+     \r\n+}\r\n+\r\n+export const productState=atom<Product>({\r\n+    key:\"productState\",\r\n+    default:defaultProductState\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695384735006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   image:string;\r\n   id:number\r\n }\r\n \r\n-export type= Product{\r\n+export type Product{\r\n     name:string\r\n     creatorId:string |null|undefined;\r\n     category:string\r\n     createdAt?:Timestamp;\r\n@@ -38,47 +38,5 @@\n \r\n export const productState=atom<Product>({\r\n     key:\"productState\",\r\n     default:defaultProductState\r\n-})\n-import { Timestamp } from \"firebase/firestore\";\r\n-import { atom } from \"recoil\";\r\n-\r\n-\r\n-export type props={\r\n-  image:string;\r\n-  id:number\r\n-}\r\n-\r\n-export interface Product{\r\n-    name:string\r\n-    creatorId:string |null|undefined;\r\n-    category:string\r\n-    createdAt?:Timestamp;\r\n-    imageURL?:props[];\r\n-    description:string;\r\n-    productId?:string;\r\n-    price:any;\r\n-    id?:string\r\n-\r\n-}\r\n-\r\n-\r\n-\r\n-\r\n-const defaultProductState:Product = {\r\n- name:\"\",\r\n- creatorId:\"\",\r\n- category:\"\",\r\n- description:\"\",\r\n- productId:\"\",\r\n- price:\"\",\r\n- imageURL:[],\r\n- id:\"\"\r\n- \r\n-     \r\n-}\r\n-\r\n-export const productState=atom<Product>({\r\n-    key:\"productState\",\r\n-    default:defaultProductState\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695392949564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     name:string\r\n     creatorId:string |null|undefined;\r\n     category:string\r\n     createdAt?:Timestamp;\r\n-    imageURL?:props[];\r\n+    imageURL:props[];\r\n     description:string;\r\n     productId?:string;\r\n     price:any;\r\n     id?:string\r\n"
                 }
             ],
             "date": 1694612496986,

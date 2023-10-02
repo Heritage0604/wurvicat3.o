@@ -1,15 +1,51 @@
 import { db ,auth, storage} from '@/firebase/firebase';
-import { Flex,Text,Image,Icon,Input, Textarea,Stack } from '@chakra-ui/react';
-import { getDoc,doc ,updateDoc, arrayUnion, deleteField} from 'firebase/firestore';
+import { Flex,Text,Image,Icon,Input, Textarea,useDisclosure,Stack,Button,} from '@chakra-ui/react';
+import { getDoc,doc ,updateDoc,addDoc, arrayUnion,collection,getDocs, deleteField,Timestamp, deleteDoc} from 'firebase/firestore';
 import { GetServerSidePropsContext } from 'next';
 import React,{useState,useEffect,useRef} from 'react';
 import {FaUserAlt} from "react-icons/fa"
-import {MdOutlineCancel} from "react-icons/md"
+import {MdDeleteOutline, MdOutlineCancel} from "react-icons/md"
 import { useAuthState } from "react-firebase-hooks/auth";
 import { AdminUser, adminUserState } from '@/atoms/AdminUser';
 import {toast} from "react-toastify" 
 import { useRecoilBridgeAcrossReactRoots_UNSTABLE, useRecoilState } from 'recoil';
 import { deleteObject, getDownloadURL, ref, uploadString } from 'firebase/storage';
+import {
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+  TableContainer,
+} from '@chakra-ui/react'
+import {MdOutlineMoreHoriz} from "react-icons/md"
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+} from '@chakra-ui/react'
+import { FiMoreHorizontal } from 'react-icons/fi';
+import { CiEdit } from 'react-icons/ci';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from '@chakra-ui/react'
+import AdminTable from './AdminTable';
+ 
+
 
 
 type ProfileDashboardProps = {
@@ -27,14 +63,35 @@ const ProfileDashboard:React.FC<ProfileDashboardProps> = () => {
     const [user, loading, error] = useAuthState(auth);
     const[lastName,setLastName]=useState("")
     const[phoneNumber,setPhoneNumber]=useState<any>("")
+    const[categories,setCategories]=useState<any>([])
+    const[addCat,setAddCat]=useState('')
     const[userName,setUserName]=useState("")
     const[email,setEmail]=useState("")
     const[location,setLocation]=useState("")
+    const[searchCat,setSearchCat]=useState('')
     const[image,setImage]=useState("")
     const [file, setFile] = useState<props[]>([]);
     const[userValue,setUserValue]=useRecoilState(adminUserState)
+    const [addOptions,setAddOptions]=useState<any>([])
+      const Data=["Option","Option","Option","Option"]
+        const { isOpen, onOpen, onClose } = useDisclosure()
+      
+ 
     
     
+const getCategories=async()=>{
+
+
+const querySnapshot = await getDocs(collection(db, "categories"));
+   const comments = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));;
+      setCategories(comments)
+      console.log(comments)
+
+}
+
 
     const  getUser= async(id:any)=>{
  const docRef = doc(db, "Admin", id);
@@ -66,6 +123,7 @@ if (docSnap.exists()) {
 useEffect(()=>{
 if(user){
  getUser(user.email)
+ getCategories()
 }
 
 },[user,loading,error])
@@ -153,8 +211,43 @@ console.log(e.message)
 }
   }
 
+  const addCategory=async()=>{
+    const data={
+      createdAt:Timestamp.fromDate(new Date()),
+    creatorId:user?.email,
+    category:addCat
+    }
+try{
+const docRef = await addDoc(collection(db, "categories"),{
+   createdAt:Timestamp.fromDate(new Date()),
+    creatorId:user?.email,
+    category:addCat
+});
+onClose()
+setCategories((prev:any)=>[...prev,data])
+setAddCat('')
+toast.success("Category Added Successfully",{position:"top-center",autoClose:1500,theme:"light"})
+}catch(e:any){
+toast.error("An Error Occured",{position:"top-center",autoClose:1500,theme:"light"})
+}
+  }
+
+  const deleteCat=async(cat:any)=>{
+try{
+    
+        setCategories((prev:any)=>prev.filter((item:any)=>item.id !== cat.id))
+    await deleteDoc(doc(db, "category", `${cat.id}`));
+    toast.success("Category deleted Successfully",{position:"top-center",autoClose:1500,theme:"light"})
+}catch(error:any){
+    toast.error("An Error Occured Try Refreshing Page",{position:"top-center",autoClose:1500,theme:"light"})
+    console.log(error.message)
+}
+  }
+
+
     return <Flex mt={"22vh"} mb={"10vh"} flexDir={{base:"column",lg:'row'}} align={{base:'center',lg:"flex-start"}} justify={{base:"center",lg:"space-around"}}  width={"100%"}>
-<Flex flexDir={"column"}  width={{base:"85%",lg:"40%"}} position={'relative'} boxShadow='sm' p='6' rounded='md' bg='white'>
+<Flex flexDir={"column"} width={{base:"85%",lg:"40%"}}>
+  <Flex flexDir={"column"}  width={{base:"100%"}} position={'relative'} boxShadow='sm' p='6' rounded='md' bg='white'>
 {file.length>0 ?  <Image
 className='select-none'
 
@@ -171,6 +264,79 @@ className='select-none'
     <Text color={"gray"} mb={"2vh"}><span className={'text-black'}>PhoneNumber</span> {userValue.phoneNumber} </Text>
     <Text color={"gray"} mb={"2vh"}><span className={'text-black'}>Location</span>  {userValue.location} </Text>
 </Flex>
+</Flex>
+
+<Flex mt={"20px"} flexDir={"column"}  width={{base:"100%"}} position={'relative'} boxShadow='sm' p='6' rounded='md' bg='white'>
+  <Flex mb='20px'  justify={'space-around'}  align='center'>
+    <Text>Categories</Text>
+    <Input value={searchCat} onChange={(e)=>setSearchCat(e.target.value)} width={"150px"} placeholder='Search Category'/>
+    <Button onClick={onOpen} colorScheme='blue' >Add Category</Button>
+    </Flex>
+    <TableContainer height={{base:"30vh"}} overflowY={"scroll"}>
+  <Table variant='simple'>
+    <TableCaption>Categories for Products</TableCaption>
+    <Thead>
+      <Tr>
+        <Th>Categories</Th>
+        <Th>CreatedAt</Th>
+        <Th isNumeric>Options</Th>
+      </Tr>
+    </Thead>
+    <Tbody>
+      {categories.filter((item:any)=>{
+        return item.category.toLowerCase() ===""?item :item.category.toLowerCase().includes(searchCat.toLowerCase())
+      } ).map((category:any,index:number)=>{
+        
+        
+        return(
+
+            <Tr key={index}>
+        <Td>{category.category}</Td>
+        
+            <Td >
+          {new Date(category.createdAt.seconds *1000).toDateString()}
+        </Td>
+            <Td   isNumeric>
+                 <Menu>
+  <MenuButton 
+   px={4}
+   fontSize={"20px"}
+    py={2}
+    bg={"transparent"}
+    transition='all 0.2s'
+    borderRadius='md'
+    border="none"
+    color="black"
+    borderWidth='1px'
+    _hover={{ bg: 'transparent' }}
+    _expanded={{ bg: 'transparent' }}
+     zIndex={1}
+    _focus={{  bg: 'transparent' }}
+  as={Button}  leftIcon={<FiMoreHorizontal /> } >
+  
+  </MenuButton>
+  <MenuList>
+    <MenuItem  color={"blue.400"}>Edit <Icon ml={"3px"} as={CiEdit}/></MenuItem>
+    <MenuItem  color={"red"} onClick={()=>deleteCat(category)} >Delete <Icon ml={"2px"} as={MdDeleteOutline}/></MenuItem>
+    
+  </MenuList>
+</Menu>
+        </Td>
+        
+      
+      </Tr>
+ 
+        )
+    
+      })}
+    </Tbody>
+  </Table>
+</TableContainer>
+</Flex>
+
+
+{user && <AdminTable/>}
+
 </Flex>
 
 <Flex flexDir='column' mt={{base:"4vh",lg:'0'}} width={{base:"85%",lg:"40%"}} position={'relative'} boxShadow='sm' p='6' rounded='md' bg='white'>
@@ -201,6 +367,8 @@ className='select-none'
         </label>
      <Textarea value={location} onChange={(e)=>setLocation(e.target.value)} variant='outline' placeholder='Location' />
   </Flex>
+
+
 
 
   <Flex>
@@ -240,6 +408,34 @@ className='select-none'
 
 </Flex>
 
+
+
+
+     <Modal closeOnOverlayClick={false} isOpen={isOpen} onClose={()=>{
+      onClose();setAddCat('')
+     }}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Add to your product Categories</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody pb={6}>
+<Input value={addCat} onChange={(e)=>setAddCat(e.target.value)} placeholder='Add Category'/>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button onClick={()=>{
+              addCategory(); 
+            }} colorScheme='blue' mr={3}>
+              Save
+            </Button>
+            <Button onClick={()=>{
+              onClose();
+              setAddCat('')
+
+            }}>Cancel</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </Flex>
 }
 export default ProfileDashboard;

@@ -6,13 +6,25 @@ import React,{useEffect,useState,useRef} from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import{MdOutlineCancel}from "react-icons/md"
 import { useRecoilState } from 'recoil'
-import { getDoc,doc ,updateDoc, arrayUnion, deleteField, arrayRemove} from 'firebase/firestore';
+import { getDoc,doc,getDocs ,updateDoc, arrayUnion, deleteField, arrayRemove} from 'firebase/firestore';
 import { collection, addDoc,Timestamp } from "firebase/firestore";
 import {toast} from "react-toastify" 
 import { useRouter } from 'next/router'
 import 'react-quill/dist/quill.snow.css';
 import dynamic from "next/dynamic";
 import { deleteObject, getDownloadURL, ref, uploadString } from 'firebase/storage'
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+} from '@chakra-ui/react'
+import {BsChevronDown} from "react-icons/bs"
+import {AiOutlinePlus} from "react-icons/ai"
 
 type EditProductProps = {
     productData:Product
@@ -58,6 +70,7 @@ const EditProduct:React.FC<EditProductProps> = ({productData}) => {
     const regex = /^\s*$/;
     const [user, loading, errorUser] = useAuthState(auth);
     const[userValue,setUserValue]=useRecoilState(adminUserState)
+    const [categories,setCategories]=useState<any>([])
     
     const[editor,setEditor]=useState("")
     const router=useRouter()
@@ -177,10 +190,22 @@ setFile(productData!.imageURL)
  
 }
     }
+
+         const getCategories=async()=>{
+const querySnapshot = await getDocs(collection(db, "categories"));
+   const comments = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));;
+      setCategories(comments)
+    
+
+}
     
 useEffect(()=>{
 if(user){
  getUser(user.email)
+ getCategories()
 }
 
 },[user])
@@ -204,9 +229,20 @@ if(user){
 <Input type="number" inputMode="numeric" value={price} onChange={(e)=>setPrice(e.target.value)}  placeholder='Product Price'/>
 </Flex>
 
-<Flex mt='20px' flexDir='column'>
-        <Text ml={"1px"} mb={"5px"}>Category</Text>
-<Input  value={category} onChange={(e)=>setCategory(e.target.value)} placeholder='Product Category'/>
+<Flex mt='20px'  >
+  <Menu>
+  <MenuButton as={Button}>
+    {category ? category :'Categories'}  <Icon fontWeight={600} as={BsChevronDown}/>
+  </MenuButton>
+  <MenuList>
+    {categories.map((cat:any)=>{
+      return(
+        <MenuItem onClick={()=>setCategory(cat.category)}>{cat.category} </MenuItem>
+      )
+    })}
+  
+  </MenuList>
+</Menu>
 </Flex>
 
 

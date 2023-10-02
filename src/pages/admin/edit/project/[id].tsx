@@ -1,10 +1,13 @@
-import React from 'react'
 import {auth,storage, db } from "@/firebase/firebase";
 import { collection, addDoc,getDoc, updateDoc, doc, arrayUnion } from "firebase/firestore";
 import { Projects } from "@/atoms/Project"
 import AdminNavbar from '@/components/AdminNavbar'
 import NotFound from "@/pages/404";
 import EditProject from '@/components/EditProject';
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { useRouter } from 'next/router'
+import ProfileLoader from '@/components/ProfileLoader'
+import React,{useEffect} from 'react'
 
 type Props = {
     projectData:Projects,
@@ -12,6 +15,20 @@ type Props = {
 }
 
 const EditProjects:React.FC<Props> = ({projectData}) => {
+
+ const [user, loading, error] = useAuthState(auth);
+   	const router = useRouter();
+
+      useEffect(() => {
+		if (loading && !user) {
+			return
+		};
+    if(loading==false && !user){
+      router.push("/")
+    }
+		
+	}, [user, router, loading]);
+
 
 if(!projectData ){
 
@@ -25,8 +42,10 @@ if(!projectData ){
 
   return (
     <div>
+   {user ? <>
         <AdminNavbar/>
         <EditProject projectData={projectData}/>
+   </> :<ProfileLoader/>}
     </div>
   )
 }
