@@ -26,7 +26,7 @@ Lagos state, Nigeria.
   </Text>
   <Flex flexDir={"column"}>
 <Text  mt={"3vh"} color='white'>Telephone:
-08033848454, 08024104821</Text>
++2348033848454, +2348024104821</Text>
 <Text mb={{base:"5vh"}}   mt={"3vh"} color='white'>Email:
  wurvicat@gmail.com</Text>
 </Flex>

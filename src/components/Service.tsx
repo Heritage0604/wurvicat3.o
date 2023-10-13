@@ -20,17 +20,16 @@ const Service:React.FC<ServiceProps> = () => {
     <Text ml={{base:"10",md:"0"}} mr={{base:"10px",md:"0"}} fontSize={{base:"20px",md:"25px"}}   >
         <b>Our service is phenomenal in <br/>
 the world of
-Sales and <br/> Distribution of electircal <br/> Equipments
+Sales and <br/> Distribution of Electrical <br/> Equipments
 </b>
 </Text>
 <Text ml={{base:"10",md:"0"}} mr={{base:"20px",md:"0"}} mt={{base:"10px"}}>
     We provide exceptional service in
-     the design and implementation of voice,
-      data and video networks using proven 
+     the sales and distribution of Electrical Equipments using proven 
       cost-effective solutions through our
        strategic alliances with industry players
         that share our commitment to delivering 
-        such value. <Link>LEARN MORE →</Link>
+        such value. <Link _hover={{color:'orange.500'}} href='/products'>LEARN MORE →</Link>
 </Text>
      </Flex>
             </Flex>

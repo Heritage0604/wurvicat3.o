@@ -22,15 +22,15 @@ setactive(router.pathname)
 
   return (
     <>
-        <Flex  top={'6vh'}  justify={{base:"space-between",md:"space-around"}} align={"center"} height={{base:'14vh',md:"15vh"}}  >
+        <Flex  top={'6vh'}  justify={{base:"space-between",lg:"space-around"}} align={"center"} height={{base:'14vh',lg:"15vh"}}  >
 
           {/* the logo of the brand wurvicat */}
-           <Flex ml={{base:"30px",md:"0px"}}>
-            <Image bg={"orange.500"} src={'/wurvicat.png'} width={{base:"70px",md:'75px'}} alt="Wurvicat"/>
-           </Flex>
+           <Link href='/' ml={{base:"30px",lg:"0px"}}>
+            <Image bg={"orange.500"} src={'/wurvicat.png'} width={{base:"70px",lg:'75px'}} alt="Wurvicat"/>
+           </Link>
 
            {/* for a large device sucah a laptop,monitor and tabs */}
-            <Flex display={{base:"none",md:"flex"}} width={"55%"} justify="space-around" >
+            <Flex display={{base:"none",lg:"flex"}} width={"55%"} justify="space-around" >
                 <Link as={NextLink} prefetch={true} href="/" color={active=='/' ? "orange.500" :"black"} _hover={{color:"orange.500",transition: '0.4s'}} >HOME</Link>
                 <Link  as={NextLink} prefetch={true} href="/about" color={active=='/about' ? "orange.500" :"black"} _hover={{color:"orange.500",transition: '0.4s'}}>ABOUT US</Link>
                 <Link  as={NextLink} prefetch={true} href="/clients-partners" color={active=='/clients-partners'? "orange.500" :"black"} _hover={{color:"orange.500",transition: '0.4s'}}>CLIENTS & PARTNERS</Link>
@@ -41,7 +41,7 @@ setactive(router.pathname)
             </Flex>
 
             {/* menu for a small device such as a phone */}
-            <Flex mr={{base:"30px",md:"0px"}} display={{base:"flex",md:"none"}}>
+            <Flex mr={{base:"30px",lg:"0px"}} display={{base:"flex",lg:"none"}}>
               <Menu>
   <MenuButton
    px={4}

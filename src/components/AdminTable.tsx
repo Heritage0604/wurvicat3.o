@@ -12,7 +12,7 @@ import {
 import { db ,auth, storage} from '@/firebase/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import {toast} from "react-toastify" 
-import { getDoc,doc ,updateDoc,addDoc, arrayUnion,collection,getDocs, deleteField,Timestamp} from 'firebase/firestore';
+import { getDoc,doc ,updateDoc,addDoc, arrayUnion,collection,getDocs, deleteField,Timestamp, setDoc} from 'firebase/firestore';
 import { FiMoreHorizontal } from 'react-icons/fi';
 import { CiEdit } from 'react-icons/ci'
 import {MdDeleteOutline} from "react-icons/md"
@@ -45,6 +45,7 @@ const querySnapshot = await getDocs(collection(db, "admins"));
         id: doc.id,
         ...doc.data(),
       }));;
+      console.log(comments)
       setCategories(comments)
     
 
@@ -70,10 +71,10 @@ if(user){
         return
     }
 try{
-const docRef = await addDoc(collection(db, "admins"),{
+const docRef = await setDoc(doc(db, "admins", addCat),{
    createdAt:Timestamp.fromDate(new Date()),
     creatorId:user?.email,
-    category:addCat
+    email:addCat
 });
 onClose()
 setCategories((prev:any)=>[...prev,data])
@@ -115,21 +116,25 @@ try{
       </Tr>
     </Thead>
    <Tbody>
-      {categories.filter((item:any)=>{
-        return item.category.toLowerCase() ===""?item :item.category.toLowerCase().includes(searchCat.toLowerCase())
+      {
+        categories.length > 0 && (
+                categories.filter((item:any)=>{
+        return item.email.toLowerCase() ===""?item :item.email.toLowerCase().includes(searchCat.toLowerCase())
       } ).map((category:any,index:number)=>{
         
         
         return(
 
             <Tr key={index}>
-        <Td>{category.category}</Td>
+        <Td>{category.email}</Td>
         
             <Td >
           {new Date(category.createdAt.seconds *1000).toDateString()}
         </Td>
             <Td   isNumeric>
-                 <Menu>
+            {
+              category.creatorId=='info@wurvicat.com' || category.creatorId=='adegbiteheritage6@gmail.com' && (
+                                 <Menu>
   <MenuButton 
    px={4}
    fontSize={"20px"}
@@ -152,6 +157,8 @@ try{
     
   </MenuList>
 </Menu>
+              )
+            }
         </Td>
         
       
@@ -159,7 +166,9 @@ try{
  
         )
     
-      })}
+      })
+        )
+      }
     </Tbody>
   </Table>
 </TableContainer>

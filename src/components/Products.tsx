@@ -104,10 +104,10 @@ useEffect(()=>{
    <Flex p='6'  mt={"5vh"} flexDir={{base:"column"}} align='center' justify='center' width={"100%"} >
 <Flex  className='max-w-5xl' align='center'    width='100%'  > 
     <Input width={{base:'90%',lg:"90%"}} placeholder="Search Products" value={searchCart} onChange={(e)=>setSearchCart(e.target.value)}/>
-<Flex _hover={{transform:'scale(1.2)'}} cursor='pointer'  width='40px' position='relative' ml='10%'>
+<Link href='/cart' _hover={{transform:'scale(1.2)'}} cursor='pointer'  width='40px' position='relative' ml='10%'>
         <Icon  duration={'0.5s'}   fontSize='25px' as={AiOutlineShoppingCart}/>
 <Flex right='5px' top='-5px'  position='absolute' bg='orange.500' width='20px' height='20px' align='center' justify='center' color='white' borderRadius='50%'>{cartNumber}</Flex>
-</Flex>
+</Link>
 </Flex>
 <SimpleGrid   columns={{base:2,lg:4}} spacing={10} mt='5vh' className='max-w-5xl '   width='100%'   >
     {products.filter((item:any)=>{

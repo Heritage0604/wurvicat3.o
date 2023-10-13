@@ -5,7 +5,7 @@ import {useSetRecoilState} from "recoil"
 import {useRouter} from "next/navigation"
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth,db,storage } from '@/firebase/firebase'
-import { setDoc,doc } from 'firebase/firestore'
+import { setDoc,doc,getDoc } from 'firebase/firestore'
 import {toast} from "react-toastify" 
 import { AdminUser } from '@/atoms/AdminUser'
 
@@ -42,10 +42,20 @@ setErrorSignup("")
     //try catch function
     try{
 
- const newuser=await createUserWithEmailAndPassword(email, password)
-if(!newuser){
+      const docRef = doc(db, "admins", email);
+      const docSnap = await getDoc(docRef);
+
+if (docSnap.exists()) {
+  const newuser=await createUserWithEmailAndPassword(email, password)
+  if(!newuser){
     throw new Error("An error occured")
 }
+} else {
+  toast.error("Not Authorized to Create Account",{position:"top-center",autoClose:1500,theme:"light"})
+  return
+}
+ 
+
 
 toast.success("Account Created Successfully",{position:"top-center",autoClose:1500,theme:"light"})
 // router.push("admin/profile")
